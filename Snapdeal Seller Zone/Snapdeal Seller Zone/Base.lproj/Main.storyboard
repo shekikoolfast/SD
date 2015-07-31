@@ -306,25 +306,31 @@
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="T4v-gs-NEi">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="T4v-gs-NEi">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T4v-gs-NEi" id="984-im-10g">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEu-iN-D82">
-                                                    <rect key="frame" x="30" y="10" width="540" height="30"/>
+                                                    <rect key="frame" x="30" y="37" width="540" height="44"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <state key="normal" title="Join Now">
-                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="WEu-iN-D82" secondAttribute="bottom" constant="9" id="WoG-T0-tJK"/>
+                                                <constraint firstAttribute="bottom" secondItem="WEu-iN-D82" secondAttribute="bottom" constant="8" id="WoG-T0-tJK"/>
                                                 <constraint firstAttribute="trailing" secondItem="WEu-iN-D82" secondAttribute="trailing" constant="30" id="ZOy-7W-Elu"/>
                                                 <constraint firstItem="WEu-iN-D82" firstAttribute="leading" secondItem="984-im-10g" secondAttribute="leading" constant="30" id="lrZ-qg-3kp"/>
-                                                <constraint firstItem="WEu-iN-D82" firstAttribute="top" secondItem="984-im-10g" secondAttribute="top" constant="10" id="qOv-nr-gcn"/>
+                                                <constraint firstItem="WEu-iN-D82" firstAttribute="top" secondItem="984-im-10g" secondAttribute="top" constant="37" id="qOv-nr-gcn"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>

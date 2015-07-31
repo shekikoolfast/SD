@@ -10,8 +10,20 @@ import UIKit
 
 public class SDNetworkManager: NSObject
 {
-    static let sharedInstance: SDNetworkManager = {
-        let instance = SDNetworkManager()
-        return instance
-    }()
+    public class var sharedInstance :SDNetworkManager
+    {
+        struct Singleton
+        {
+            static let instance = SDNetworkManager()
+        }
+        return Singleton.instance
+    }
+    
+    public func testMethod()
+    {
+        print("2")
+    }
+    
+    
+    
 }

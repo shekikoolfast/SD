@@ -26,8 +26,8 @@
 		4A54B2521B68C630006CBA9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A54B2501B68C630006CBA9A /* LaunchScreen.xib */; };
 		4A54B25E1B68C630006CBA9A /* Snapdeal_Seller_ZoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54B25D1B68C630006CBA9A /* Snapdeal_Seller_ZoneTests.swift */; };
 		4AAF9AA51B6A956B0045472F /* SDRegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF9AA41B6A956B0045472F /* SDRegisterTableViewController.swift */; };
-		4AAF9AA61B6A956B0045472F /* SDRegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF9AA41B6A956B0045472F /* SDRegisterTableViewController.swift */; };
-		4AAF9AA71B6A956B0045472F /* SDRegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF9AA41B6A956B0045472F /* SDRegisterTableViewController.swift */; };
+		4AAF9AAA1B6AAD010045472F /* PostLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AAF9AA91B6AAD010045472F /* PostLogin.storyboard */; };
+		4AAF9AAB1B6B6D9D0045472F /* SDCoreDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A503B6C1B6A739A0072454E /* SDCoreDataManager.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +124,7 @@
 		4A54B25C1B68C630006CBA9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A54B25D1B68C630006CBA9A /* Snapdeal_Seller_ZoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snapdeal_Seller_ZoneTests.swift; sourceTree = "<group>"; };
 		4AAF9AA41B6A956B0045472F /* SDRegisterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDRegisterTableViewController.swift; sourceTree = "<group>"; };
+		4AAF9AA91B6AAD010045472F /* PostLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PostLogin.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +266,7 @@
 		4A503B941B6A7EEE0072454E /* PostLogin */ = {
 			isa = PBXGroup;
 			children = (
+				4AAF9AA91B6AAD010045472F /* PostLogin.storyboard */,
 			);
 			path = PostLogin;
 			sourceTree = "<group>";
@@ -272,6 +274,7 @@
 		4A503B951B6A7EEE0072454E /* PreLogin */ = {
 			isa = PBXGroup;
 			children = (
+				4A54B24B1B68C630006CBA9A /* Main.storyboard */,
 				4A503B961B6A7F630072454E /* SDLoginViewController.swift */,
 				4AAF9AA41B6A956B0045472F /* SDRegisterTableViewController.swift */,
 			);
@@ -311,7 +314,6 @@
 				4A503B931B6A7EC60072454E /* ViewControllers */,
 				4A503B901B6A7E970072454E /* Managers */,
 				4A54B2471B68C630006CBA9A /* AppDelegate.swift */,
-				4A54B24B1B68C630006CBA9A /* Main.storyboard */,
 				4A54B24E1B68C630006CBA9A /* Images.xcassets */,
 				4A54B2501B68C630006CBA9A /* LaunchScreen.xib */,
 				4A54B2451B68C62F006CBA9A /* Supporting Files */,
@@ -351,6 +353,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AAF9AAB1B6B6D9D0045472F /* SDCoreDataManager.h in Headers */,
 				4A503B461B6A70C00072454E /* SDNetworkManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -568,6 +571,7 @@
 			files = (
 				4A54B24D1B68C630006CBA9A /* Main.storyboard in Resources */,
 				4A54B2521B68C630006CBA9A /* LaunchScreen.xib in Resources */,
+				4AAF9AAA1B6AAD010045472F /* PostLogin.storyboard in Resources */,
 				4A54B24F1B68C630006CBA9A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -587,7 +591,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A503B621B6A70FE0072454E /* SDNetworkManager.swift in Sources */,
-				4AAF9AA61B6A956B0045472F /* SDRegisterTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,7 +606,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AAF9AA71B6A956B0045472F /* SDRegisterTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,6 +683,7 @@
 				4A54B24C1B68C630006CBA9A /* Base */,
 			);
 			name = Main.storyboard;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		4A54B2501B68C630006CBA9A /* LaunchScreen.xib */ = {
