@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A0F695C1B6BE6E6008D350E /* SDTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0F695B1B6BE6E6008D350E /* SDTabBarController.swift */; };
+		4A0F695F1B6BEA0A008D350E /* SDWidgetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0F695E1B6BEA0A008D350E /* SDWidgetsViewController.swift */; };
 		4A503B461B6A70C00072454E /* SDNetworkManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A503B451B6A70C00072454E /* SDNetworkManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A503B4C1B6A70C00072454E /* SDNetworkManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A503B411B6A70C00072454E /* SDNetworkManager.framework */; };
 		4A503B551B6A70C00072454E /* SDNetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A503B541B6A70C00072454E /* SDNetworkManagerTests.swift */; };
@@ -98,6 +100,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4A0F695B1B6BE6E6008D350E /* SDTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDTabBarController.swift; sourceTree = "<group>"; };
+		4A0F695E1B6BEA0A008D350E /* SDWidgetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDWidgetsViewController.swift; sourceTree = "<group>"; };
 		4A503B411B6A70C00072454E /* SDNetworkManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDNetworkManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A503B441B6A70C00072454E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A503B451B6A70C00072454E /* SDNetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDNetworkManager.h; sourceTree = "<group>"; };
@@ -177,6 +181,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A0F695D1B6BE9EE008D350E /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				4A0F695E1B6BEA0A008D350E /* SDWidgetsViewController.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
 		4A503B421B6A70C00072454E /* SDNetworkManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,7 +278,9 @@
 		4A503B941B6A7EEE0072454E /* PostLogin */ = {
 			isa = PBXGroup;
 			children = (
+				4A0F695D1B6BE9EE008D350E /* Dashboard */,
 				4AAF9AA91B6AAD010045472F /* PostLogin.storyboard */,
+				4A0F695B1B6BE6E6008D350E /* SDTabBarController.swift */,
 			);
 			path = PostLogin;
 			sourceTree = "<group>";
@@ -487,6 +501,7 @@
 		4A54B23A1B68C62F006CBA9A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = Snapdeal;
 				TargetAttributes = {
@@ -622,9 +637,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A503B921B6A7E970072454E /* SDAppearanceManager.swift in Sources */,
+				4A0F695F1B6BEA0A008D350E /* SDWidgetsViewController.swift in Sources */,
 				4AAF9AA51B6A956B0045472F /* SDRegisterTableViewController.swift in Sources */,
 				4A503B971B6A7F630072454E /* SDLoginViewController.swift in Sources */,
 				4A54B2481B68C630006CBA9A /* AppDelegate.swift in Sources */,
+				4A0F695C1B6BE6E6008D350E /* SDTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

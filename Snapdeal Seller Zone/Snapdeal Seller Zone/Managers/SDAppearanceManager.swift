@@ -14,7 +14,9 @@ class SDAppearanceManager: NSObject
     {
         UILabel.appearance().font = UIFont.systemFontOfSize(15)
         var backButtonImage = UIImage(named: "")
-//        UIBarButtonItem.appearance().setBackButtonBackgroundImage(backButtonImage, forState: .Normal, barMetrics: .Default)
+        UIBarButtonItem.appearance().setBackButtonBackgroundImage(backButtonImage, forState: .Normal, barMetrics: .Default)
 //        UINavigationBar.appearance().backIndicatorImage
+        UICollectionView.appearance().backgroundColor = UIColor.groupTableViewBackgroundColor()
+        UITableView.appearance().backgroundColor = UIColor.groupTableViewBackgroundColor()
     }
 }

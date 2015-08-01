@@ -83,7 +83,9 @@ class SDLoginViewController: UIViewController, UITextFieldDelegate
     
     @IBAction func handleTapOnLogin(sender: UIButton)
     {
-        
+        var storybord = UIStoryboard(name: "PostLogin", bundle: NSBundle.mainBundle())
+        var tabbarController = storybord.instantiateInitialViewController() as! SDTabBarController
+        navigationController?.setViewControllers([tabbarController], animated: true)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -99,6 +101,8 @@ class SDLoginViewController: UIViewController, UITextFieldDelegate
 
 extension SDLoginViewController: UITextFieldDelegate
 {
+    //MARK:
+    //MARK: UITextFieldDelegate Methods
     func textFieldShouldReturn(textField: UITextField) -> Bool
     {
         if textField == self.tfEmailID
@@ -125,8 +129,7 @@ extension SDLoginViewController: UITextFieldDelegate
     func isValidEmail(#testStr:String) -> Bool
     {
         // println("validate calendar: \(testStr)")
-        let emailRegEx = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
-        
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluateWithObject(testStr)
     }
