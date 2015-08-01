@@ -19,6 +19,12 @@ class SDWidgetsViewController: UIViewController {
         collectionView.addSubview(refreshControl)
     }
 
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        var lbl = SDAppearanceManager.showNoInternet()
+        self.view.addSubview(lbl)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

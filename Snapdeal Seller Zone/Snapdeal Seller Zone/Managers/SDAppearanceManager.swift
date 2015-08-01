@@ -19,4 +19,15 @@ class SDAppearanceManager: NSObject
         UICollectionView.appearance().backgroundColor = UIColor.groupTableViewBackgroundColor()
         UITableView.appearance().backgroundColor = UIColor.groupTableViewBackgroundColor()
     }
+    
+    class func showNoInternet() -> UILabel?
+    {
+        var lblNoInternet = UILabel(frame: UIScreen.mainScreen().bounds)
+        var attrs = [NSFontAttributeName : UIFont.systemFontOfSize(19.0), NSTextEffectAttributeName: NSTextEffectLetterpressStyle]
+        var string = NSMutableAttributedString(string: "Cannot Connect to Snapdeal", attributes: attrs)
+        lblNoInternet.attributedText = string
+        return lblNoInternet
+//        string.attribu
+//        lblNoInternet.
+    }
 }
