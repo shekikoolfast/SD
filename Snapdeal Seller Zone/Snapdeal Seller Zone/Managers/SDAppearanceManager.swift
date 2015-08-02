@@ -18,6 +18,10 @@ class SDAppearanceManager: NSObject
 //        UINavigationBar.appearance().backIndicatorImage
         UICollectionView.appearance().backgroundColor = UIColor.groupTableViewBackgroundColor()
         UITableView.appearance().backgroundColor = UIColor.groupTableViewBackgroundColor()
+        UINavigationBar.appearance().tintColor = UIColor.cyanColor()
+        UINavigationBar.appearance().barTintColor = UIColor.redColor()
+        UITabBar.appearance().tintColor = UIColor.brownColor()
+        UITabBar.appearance().barTintColor = UIColor.purpleColor()
     }
     
     class func showNoInternet() -> UILabel?

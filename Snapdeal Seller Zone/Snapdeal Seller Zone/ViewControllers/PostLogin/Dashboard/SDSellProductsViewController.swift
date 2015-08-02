@@ -15,7 +15,7 @@ class SDSellProductsViewController: UIViewController {
         super.viewDidLoad()
 
         var header = collectionView.collectionViewLayout
-        header.registerClass(SDScrollDecorationView.self, forDecorationViewOfKind: "FloorPlan")
+        //header.registerClass(SDScrollDecorationView.self, forDecorationViewOfKind: "FloorPlan")
         
         // Do any additional setup after loading the view.
     }
@@ -30,31 +30,31 @@ class SDSellProductsViewController: UIViewController {
 
 extension SDSellProductsViewController: UICollectionViewDataSource
 {
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int
-    {
-        return 5
-    }
-    
-    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView
-    {
-        if kind == UICollectionElementKindSectionHeader
-        {
-            let headerCell = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "HeaderView", forIndexPath: indexPath) as! UICollectionReusableView
-            headerCell.backgroundColor = UIColor.greenColor()
-            return headerCell
-        }
-        return UICollectionReusableView()
-    }
+//    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int
+//    {
+//        return 5
+//    }
+//    
+//    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView
+//    {
+//        if kind == UICollectionElementKindSectionHeader
+//        {
+//            let headerCell = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "HeaderView", forIndexPath: indexPath) as! UICollectionReusableView
+//            headerCell.backgroundColor = UIColor.greenColor()
+//            return headerCell
+//        }
+//        return UICollectionReusableView()
+//    }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return 5
+        return 1
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("SellCell", forIndexPath: indexPath) as! UICollectionViewCell
-        cell.backgroundColor = UIColor.redColor()
+        cell.backgroundColor = UIColor.whiteColor()
         
         return cell
     }
@@ -70,11 +70,7 @@ extension SDSellProductsViewController: UICollectionViewDelegateFlowLayout
 {
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize
     {
-        return CGSizeMake(CGRectGetWidth(self.view.frame), 50)
-    }
-    
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSizeMake(CGRectGetWidth(self.view.frame), 50)
+        return CGSizeMake(CGRectGetWidth(self.view.frame), 150)
     }
 }
 

@@ -19,8 +19,23 @@ class SDWidgetsViewController: UIViewController {
         collectionView.addSubview(refreshControl)
         
         var layout = collectionView.collectionViewLayout
+        createBarButtons()
     }
 
+    private func createBarButtons()
+    {
+        var btnNotification = UIBarButtonItem(barButtonSystemItem: .Play, target: self, action: "handleTapOnNotification")
+        var btnNotif = UIBarButtonItem(barButtonSystemItem: .Pause, target: self, action: "handleTapOnNotification")
+        self.navigationItem.rightBarButtonItems = [btnNotification, btnNotif]
+        
+    }
+    
+    func handleTapOnNotification()
+    {
+        var tabBarController = parentViewController?.parentViewController as! SDTabBarController
+        tabBarController.selectedIndex = 4
+    }
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         var lbl = SDAppearanceManager.showNoInternet()
