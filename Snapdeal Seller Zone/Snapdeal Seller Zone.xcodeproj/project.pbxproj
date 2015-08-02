@@ -27,6 +27,11 @@
 		4A54B24F1B68C630006CBA9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A54B24E1B68C630006CBA9A /* Images.xcassets */; };
 		4A54B2521B68C630006CBA9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A54B2501B68C630006CBA9A /* LaunchScreen.xib */; };
 		4A54B25E1B68C630006CBA9A /* Snapdeal_Seller_ZoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54B25D1B68C630006CBA9A /* Snapdeal_Seller_ZoneTests.swift */; };
+		4A9BECF61B6D44EB007325B6 /* SDStickyHeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BECF51B6D44EB007325B6 /* SDStickyHeaderLayout.swift */; };
+		4A9BECF81B6D4527007325B6 /* SDSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BECF71B6D4527007325B6 /* SDSectionHeader.swift */; };
+		4A9BECFA1B6D6C83007325B6 /* WdigetHeaderReuseableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BECF91B6D6C83007325B6 /* WdigetHeaderReuseableView.swift */; };
+		4A9BECFC1B6DF7BD007325B6 /* SDScrollDecorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BECFB1B6DF7BD007325B6 /* SDScrollDecorationView.swift */; };
+		4A9BECFE1B6DF81F007325B6 /* SDSellProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BECFD1B6DF81F007325B6 /* SDSellProductsViewController.swift */; };
 		4AAF9AA51B6A956B0045472F /* SDRegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF9AA41B6A956B0045472F /* SDRegisterTableViewController.swift */; };
 		4AAF9AAA1B6AAD010045472F /* PostLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AAF9AA91B6AAD010045472F /* PostLogin.storyboard */; };
 		4AAF9AAB1B6B6D9D0045472F /* SDCoreDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A503B6C1B6A739A0072454E /* SDCoreDataManager.h */; };
@@ -127,6 +132,11 @@
 		4A54B2571B68C630006CBA9A /* Snapdeal Seller ZoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Snapdeal Seller ZoneTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A54B25C1B68C630006CBA9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A54B25D1B68C630006CBA9A /* Snapdeal_Seller_ZoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snapdeal_Seller_ZoneTests.swift; sourceTree = "<group>"; };
+		4A9BECF51B6D44EB007325B6 /* SDStickyHeaderLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDStickyHeaderLayout.swift; sourceTree = "<group>"; };
+		4A9BECF71B6D4527007325B6 /* SDSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDSectionHeader.swift; sourceTree = "<group>"; };
+		4A9BECF91B6D6C83007325B6 /* WdigetHeaderReuseableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WdigetHeaderReuseableView.swift; sourceTree = "<group>"; };
+		4A9BECFB1B6DF7BD007325B6 /* SDScrollDecorationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDScrollDecorationView.swift; sourceTree = "<group>"; };
+		4A9BECFD1B6DF81F007325B6 /* SDSellProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDSellProductsViewController.swift; sourceTree = "<group>"; };
 		4AAF9AA41B6A956B0045472F /* SDRegisterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDRegisterTableViewController.swift; sourceTree = "<group>"; };
 		4AAF9AA91B6AAD010045472F /* PostLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PostLogin.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -185,6 +195,11 @@
 			isa = PBXGroup;
 			children = (
 				4A0F695E1B6BEA0A008D350E /* SDWidgetsViewController.swift */,
+				4A9BECF51B6D44EB007325B6 /* SDStickyHeaderLayout.swift */,
+				4A9BECF71B6D4527007325B6 /* SDSectionHeader.swift */,
+				4A9BECF91B6D6C83007325B6 /* WdigetHeaderReuseableView.swift */,
+				4A9BECFB1B6DF7BD007325B6 /* SDScrollDecorationView.swift */,
+				4A9BECFD1B6DF81F007325B6 /* SDSellProductsViewController.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -636,10 +651,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A9BECFA1B6D6C83007325B6 /* WdigetHeaderReuseableView.swift in Sources */,
 				4A503B921B6A7E970072454E /* SDAppearanceManager.swift in Sources */,
+				4A9BECFC1B6DF7BD007325B6 /* SDScrollDecorationView.swift in Sources */,
+				4A9BECF61B6D44EB007325B6 /* SDStickyHeaderLayout.swift in Sources */,
 				4A0F695F1B6BEA0A008D350E /* SDWidgetsViewController.swift in Sources */,
 				4AAF9AA51B6A956B0045472F /* SDRegisterTableViewController.swift in Sources */,
 				4A503B971B6A7F630072454E /* SDLoginViewController.swift in Sources */,
+				4A9BECFE1B6DF81F007325B6 /* SDSellProductsViewController.swift in Sources */,
+				4A9BECF81B6D4527007325B6 /* SDSectionHeader.swift in Sources */,
 				4A54B2481B68C630006CBA9A /* AppDelegate.swift in Sources */,
 				4A0F695C1B6BE6E6008D350E /* SDTabBarController.swift in Sources */,
 			);
