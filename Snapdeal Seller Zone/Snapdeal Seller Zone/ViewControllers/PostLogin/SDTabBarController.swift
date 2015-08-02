@@ -10,6 +10,7 @@ import UIKit
 
 class SDTabBarController: UITabBarController {
 
+    var isNotificationArrived = false
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -34,8 +35,11 @@ extension SDTabBarController: UITabBarControllerDelegate
         var rootController = navController.viewControllers[0] as! UIViewController
         if rootController is SDMoreTableViewController
         {
-            let notificationController = storyboard?.instantiateViewControllerWithIdentifier("SDNotificationsTableViewController") as! SDNotificationsTableViewController
-            navController.viewControllers = [rootController, notificationController]
+            if isNotificationArrived
+            {
+                let notificationController = storyboard?.instantiateViewControllerWithIdentifier("SDNotificationsTableViewController") as! SDNotificationsTableViewController
+                navController.viewControllers = [rootController, notificationController]
+            }
         }
     }
 }

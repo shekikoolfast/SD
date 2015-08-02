@@ -18,6 +18,8 @@ class SDSellProductsViewController: UIViewController {
         //header.registerClass(SDScrollDecorationView.self, forDecorationViewOfKind: "FloorPlan")
         
         // Do any additional setup after loading the view.
+        navigationController?.hidesBarsOnSwipe = true
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,7 +50,7 @@ extension SDSellProductsViewController: UICollectionViewDataSource
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return 1
+        return 10
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell

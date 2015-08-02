@@ -34,6 +34,12 @@
 		4A9BECFE1B6DF81F007325B6 /* SDSellProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BECFD1B6DF81F007325B6 /* SDSellProductsViewController.swift */; };
 		4A9BED011B6E2B4B007325B6 /* SDMoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BED001B6E2B4B007325B6 /* SDMoreTableViewController.swift */; };
 		4A9BED031B6E2DD5007325B6 /* SDNotificationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BED021B6E2DD5007325B6 /* SDNotificationsTableViewController.swift */; };
+		4A9BED051B6E9308007325B6 /* SDListingStatusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BED041B6E9308007325B6 /* SDListingStatusTableViewController.swift */; };
+		4A9BED081B6EA16C007325B6 /* SDProductsBaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BED071B6EA16C007325B6 /* SDProductsBaseCollectionViewController.swift */; };
+		4A9BED0A1B6EA1CA007325B6 /* SDAllProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BED091B6EA1CA007325B6 /* SDAllProductsViewController.swift */; };
+		4A9BED0C1B6EA1DD007325B6 /* SDStockoutProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BED0B1B6EA1DD007325B6 /* SDStockoutProductsViewController.swift */; };
+		4A9BED0E1B6EA1F4007325B6 /* SDFavoriteProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BED0D1B6EA1F4007325B6 /* SDFavoriteProductsViewController.swift */; };
+		4A9BED101B6EA211007325B6 /* SDRecentlyViewedProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BED0F1B6EA211007325B6 /* SDRecentlyViewedProductsViewController.swift */; };
 		4AAF9AA51B6A956B0045472F /* SDRegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF9AA41B6A956B0045472F /* SDRegisterTableViewController.swift */; };
 		4AAF9AAA1B6AAD010045472F /* PostLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AAF9AA91B6AAD010045472F /* PostLogin.storyboard */; };
 		4AAF9AAB1B6B6D9D0045472F /* SDCoreDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A503B6C1B6A739A0072454E /* SDCoreDataManager.h */; };
@@ -141,6 +147,12 @@
 		4A9BECFD1B6DF81F007325B6 /* SDSellProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDSellProductsViewController.swift; sourceTree = "<group>"; };
 		4A9BED001B6E2B4B007325B6 /* SDMoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDMoreTableViewController.swift; sourceTree = "<group>"; };
 		4A9BED021B6E2DD5007325B6 /* SDNotificationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDNotificationsTableViewController.swift; sourceTree = "<group>"; };
+		4A9BED041B6E9308007325B6 /* SDListingStatusTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDListingStatusTableViewController.swift; sourceTree = "<group>"; };
+		4A9BED071B6EA16C007325B6 /* SDProductsBaseCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDProductsBaseCollectionViewController.swift; sourceTree = "<group>"; };
+		4A9BED091B6EA1CA007325B6 /* SDAllProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDAllProductsViewController.swift; sourceTree = "<group>"; };
+		4A9BED0B1B6EA1DD007325B6 /* SDStockoutProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDStockoutProductsViewController.swift; sourceTree = "<group>"; };
+		4A9BED0D1B6EA1F4007325B6 /* SDFavoriteProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDFavoriteProductsViewController.swift; sourceTree = "<group>"; };
+		4A9BED0F1B6EA211007325B6 /* SDRecentlyViewedProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDRecentlyViewedProductsViewController.swift; sourceTree = "<group>"; };
 		4AAF9AA41B6A956B0045472F /* SDRegisterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDRegisterTableViewController.swift; sourceTree = "<group>"; };
 		4AAF9AA91B6AAD010045472F /* PostLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PostLogin.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -297,6 +309,7 @@
 		4A503B941B6A7EEE0072454E /* PostLogin */ = {
 			isa = PBXGroup;
 			children = (
+				4A9BED061B6E9B86007325B6 /* Products */,
 				4A9BECFF1B6E2B3C007325B6 /* More */,
 				4A0F695D1B6BE9EE008D350E /* Dashboard */,
 				4AAF9AA91B6AAD010045472F /* PostLogin.storyboard */,
@@ -385,8 +398,21 @@
 			children = (
 				4A9BED001B6E2B4B007325B6 /* SDMoreTableViewController.swift */,
 				4A9BED021B6E2DD5007325B6 /* SDNotificationsTableViewController.swift */,
+				4A9BED041B6E9308007325B6 /* SDListingStatusTableViewController.swift */,
 			);
 			path = More;
+			sourceTree = "<group>";
+		};
+		4A9BED061B6E9B86007325B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4A9BED071B6EA16C007325B6 /* SDProductsBaseCollectionViewController.swift */,
+				4A9BED091B6EA1CA007325B6 /* SDAllProductsViewController.swift */,
+				4A9BED0B1B6EA1DD007325B6 /* SDStockoutProductsViewController.swift */,
+				4A9BED0D1B6EA1F4007325B6 /* SDFavoriteProductsViewController.swift */,
+				4A9BED0F1B6EA211007325B6 /* SDRecentlyViewedProductsViewController.swift */,
+			);
+			path = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -666,17 +692,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A9BECFA1B6D6C83007325B6 /* WdigetHeaderReuseableView.swift in Sources */,
+				4A9BED051B6E9308007325B6 /* SDListingStatusTableViewController.swift in Sources */,
 				4A503B921B6A7E970072454E /* SDAppearanceManager.swift in Sources */,
 				4A9BECFC1B6DF7BD007325B6 /* SDScrollDecorationView.swift in Sources */,
 				4A9BED011B6E2B4B007325B6 /* SDMoreTableViewController.swift in Sources */,
+				4A9BED081B6EA16C007325B6 /* SDProductsBaseCollectionViewController.swift in Sources */,
 				4A9BECF61B6D44EB007325B6 /* SDStickyHeaderLayout.swift in Sources */,
 				4A0F695F1B6BEA0A008D350E /* SDWidgetsViewController.swift in Sources */,
 				4AAF9AA51B6A956B0045472F /* SDRegisterTableViewController.swift in Sources */,
 				4A503B971B6A7F630072454E /* SDLoginViewController.swift in Sources */,
 				4A9BECFE1B6DF81F007325B6 /* SDSellProductsViewController.swift in Sources */,
+				4A9BED101B6EA211007325B6 /* SDRecentlyViewedProductsViewController.swift in Sources */,
 				4A9BED031B6E2DD5007325B6 /* SDNotificationsTableViewController.swift in Sources */,
 				4A9BECF81B6D4527007325B6 /* SDSectionHeader.swift in Sources */,
+				4A9BED0A1B6EA1CA007325B6 /* SDAllProductsViewController.swift in Sources */,
 				4A54B2481B68C630006CBA9A /* AppDelegate.swift in Sources */,
+				4A9BED0E1B6EA1F4007325B6 /* SDFavoriteProductsViewController.swift in Sources */,
+				4A9BED0C1B6EA1DD007325B6 /* SDStockoutProductsViewController.swift in Sources */,
 				4A0F695C1B6BE6E6008D350E /* SDTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

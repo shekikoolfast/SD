@@ -14,7 +14,7 @@ class SDMoreTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        arrDataSource += ["Notifications", "Rate this App", "My Profile", "Raise a Query", "Business Health", "Logout"]
+        arrDataSource += ["Notifications", "Rate this App", "My Profile", "Raise a Query", "Business Health", "Listing Status", "Logout"]
 
     }
 
@@ -42,6 +42,11 @@ extension SDMoreTableViewController: UITableViewDelegate
 {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
+        if indexPath.row == 5
+        {
+            performSegueWithIdentifier("segueListing", sender: nil)
+            return
+        }
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         if indexPath.row == arrDataSource.count-1
         {
