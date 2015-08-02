@@ -1,48 +1,34 @@
 //
-//  SDWidgetsViewController.swift
+//  SDSellProductsViewController.swift
 //  Snapdeal Seller Zone
 //
-//  Created by Abhishek Kumar on 31/07/15.
+//  Created by Abhishek Kumar on 02/08/15.
 //  Copyright (c) 2015 Snapdeal. All rights reserved.
 //
 
 import UIKit
 
-class SDWidgetsViewController: UIViewController {
+class SDSellProductsViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        var refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: "handlePullToRefresh:", forControlEvents: .ValueChanged)
-        collectionView.addSubview(refreshControl)
+
+        var header = collectionView.collectionViewLayout
+        header.registerClass(SDScrollDecorationView.self, forDecorationViewOfKind: "FloorPlan")
         
-        var layout = collectionView.collectionViewLayout
+        // Do any additional setup after loading the view.
     }
 
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        var lbl = SDAppearanceManager.showNoInternet()
-//        self.view.addSubview(lbl!)
-//        self.view.bringSubviewToFront(lbl!)
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func handlePullToRefresh(sender: UIRefreshControl)
-    {
-        sleep(2)
-        sender.endRefreshing()
-    }
+
 
 }
 
-
-extension SDWidgetsViewController: UICollectionViewDataSource
+extension SDSellProductsViewController: UICollectionViewDataSource
 {
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int
     {
@@ -67,20 +53,20 @@ extension SDWidgetsViewController: UICollectionViewDataSource
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
     {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("WidgetCell", forIndexPath: indexPath) as! UICollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("SellCell", forIndexPath: indexPath) as! UICollectionViewCell
         cell.backgroundColor = UIColor.redColor()
-
+        
         return cell
     }
 }
 
-extension SDWidgetsViewController: UICollectionViewDelegate
+extension SDSellProductsViewController: UICollectionViewDelegate
 {
     
 }
 
 
-extension SDWidgetsViewController: UICollectionViewDelegateFlowLayout
+extension SDSellProductsViewController: UICollectionViewDelegateFlowLayout
 {
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize
     {
@@ -91,3 +77,4 @@ extension SDWidgetsViewController: UICollectionViewDelegateFlowLayout
         return CGSizeMake(CGRectGetWidth(self.view.frame), 50)
     }
 }
+

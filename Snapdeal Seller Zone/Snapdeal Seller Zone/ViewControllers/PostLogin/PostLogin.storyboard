@@ -23,10 +23,10 @@
             </objects>
             <point key="canvasLocation" x="-646" y="-346"/>
         </scene>
-        <!--View Controller-->
+        <!--Sell Products View Controller-->
         <scene sceneID="Kgt-Ly-G5t">
             <objects>
-                <viewController id="Qci-Sq-OKo" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SDSellProductsViewController" id="Qci-Sq-OKo" customClass="SDSellProductsViewController" customModule="Snapdeal_Seller_Zone" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6MM-Nh-kU2"/>
                         <viewControllerLayoutGuide type="bottom" id="kpQ-Kz-cXd"/>
@@ -37,14 +37,14 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pSn-J9-IFZ">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8dG-ED-Xhi">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8dG-ED-Xhi" customClass="SDSectionHeader" customModule="Snapdeal_Seller_Zone" customModuleProvider="target">
                                     <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="kkm-yj-oju">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SellCell" id="kkm-yj-oju">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -54,6 +54,14 @@
                                         </view>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderView" id="bIH-NK-5Av">
+                                    <rect key="frame" x="0.0" y="64" width="50" height="600"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="Qci-Sq-OKo" id="dbS-eu-sbM"/>
+                                    <outlet property="delegate" destination="Qci-Sq-OKo" id="f3H-wE-1bG"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -65,6 +73,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vZb-hu-qIV"/>
+                    <connections>
+                        <outlet property="collectionView" destination="pSn-J9-IFZ" id="kGn-zQ-WZi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="59E-YN-kkb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -122,9 +133,9 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UqN-le-WQN">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qXt-0m-vm9">
-                                    <size key="itemSize" width="320" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ie2-fv-l3e" customClass="SDStickyHeaderLayout" customModule="Snapdeal_Seller_Zone" customModuleProvider="target">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
@@ -133,12 +144,16 @@
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderView" id="h4w-5p-Yra">
+                                    <rect key="frame" x="0.0" y="64" width="50" height="600"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="BRW-yy-m7K" id="fqi-na-LdJ"/>
                                     <outlet property="delegate" destination="BRW-yy-m7K" id="BKJ-ls-gub"/>
@@ -203,11 +218,11 @@
             </objects>
             <point key="canvasLocation" x="-1446" y="-1266"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Products-->
         <scene sceneID="h4f-Gi-dBq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aWq-g0-URO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="search" id="vcc-fG-gbR"/>
+                    <tabBarItem key="tabBarItem" title="Products" id="vcc-fG-gbR"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eHJ-3e-8dQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -222,11 +237,11 @@
             </objects>
             <point key="canvasLocation" x="-646" y="-1266"/>
         </scene>
-        <!--Sell-->
+        <!--Sell Products-->
         <scene sceneID="3vU-dy-vK5">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="umw-mT-9p4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Sell" id="3if-nx-Aua"/>
+                    <tabBarItem key="tabBarItem" title="Sell Products" id="3if-nx-Aua"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="P3o-5u-7t5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -241,11 +256,11 @@
             </objects>
             <point key="canvasLocation" x="238" y="-1266"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Payments-->
         <scene sceneID="7zS-JP-viC">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="E1f-DD-gBg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="8Rr-xw-cHI"/>
+                    <tabBarItem key="tabBarItem" title="Payments" id="8Rr-xw-cHI"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GsC-7v-Ytr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
