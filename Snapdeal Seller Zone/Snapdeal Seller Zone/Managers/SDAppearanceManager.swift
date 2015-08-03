@@ -22,6 +22,8 @@ class SDAppearanceManager: NSObject
         UINavigationBar.appearance().barTintColor = UIColor.redColor()
         UITabBar.appearance().tintColor = UIColor.brownColor()
         UITabBar.appearance().barTintColor = UIColor.purpleColor()
+        UISearchBar.appearance().barTintColor = UIColor.whiteColor()
+        UISearchBar.appearance().tintColor = UIColor.grayColor()
     }
     
     class func showNoInternet() -> UILabel?

@@ -32,23 +32,27 @@ class SDListingStatusTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+}
 
-    // MARK: - Table view data source
-
+extension SDListingStatusTableViewController: UITableViewDataSource
+{
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         return 10
     }
-
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("listingCell", forIndexPath: indexPath) as! UITableViewCell
-
-        // Configure the cell...
-
         return cell
     }
+}
 
+extension SDListingStatusTableViewController: UITableViewDelegate
+{
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
 }
 
 extension SDListingStatusTableViewController: UISearchResultsUpdating

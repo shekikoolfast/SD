@@ -40,6 +40,8 @@
 		4A9BED0C1B6EA1DD007325B6 /* SDStockoutProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BED0B1B6EA1DD007325B6 /* SDStockoutProductsViewController.swift */; };
 		4A9BED0E1B6EA1F4007325B6 /* SDFavoriteProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BED0D1B6EA1F4007325B6 /* SDFavoriteProductsViewController.swift */; };
 		4A9BED101B6EA211007325B6 /* SDRecentlyViewedProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BED0F1B6EA211007325B6 /* SDRecentlyViewedProductsViewController.swift */; };
+		4A9BED121B6F2F97007325B6 /* SDProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BED111B6F2F97007325B6 /* SDProductsViewController.swift */; };
+		4A9BED141B6F31CF007325B6 /* SDProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BED131B6F31CF007325B6 /* SDProductsCollectionViewCell.swift */; };
 		4AAF9AA51B6A956B0045472F /* SDRegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF9AA41B6A956B0045472F /* SDRegisterTableViewController.swift */; };
 		4AAF9AAA1B6AAD010045472F /* PostLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AAF9AA91B6AAD010045472F /* PostLogin.storyboard */; };
 		4AAF9AAB1B6B6D9D0045472F /* SDCoreDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A503B6C1B6A739A0072454E /* SDCoreDataManager.h */; };
@@ -153,6 +155,8 @@
 		4A9BED0B1B6EA1DD007325B6 /* SDStockoutProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDStockoutProductsViewController.swift; sourceTree = "<group>"; };
 		4A9BED0D1B6EA1F4007325B6 /* SDFavoriteProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDFavoriteProductsViewController.swift; sourceTree = "<group>"; };
 		4A9BED0F1B6EA211007325B6 /* SDRecentlyViewedProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDRecentlyViewedProductsViewController.swift; sourceTree = "<group>"; };
+		4A9BED111B6F2F97007325B6 /* SDProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDProductsViewController.swift; sourceTree = "<group>"; };
+		4A9BED131B6F31CF007325B6 /* SDProductsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDProductsCollectionViewCell.swift; sourceTree = "<group>"; };
 		4AAF9AA41B6A956B0045472F /* SDRegisterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDRegisterTableViewController.swift; sourceTree = "<group>"; };
 		4AAF9AA91B6AAD010045472F /* PostLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PostLogin.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -411,6 +415,8 @@
 				4A9BED0B1B6EA1DD007325B6 /* SDStockoutProductsViewController.swift */,
 				4A9BED0D1B6EA1F4007325B6 /* SDFavoriteProductsViewController.swift */,
 				4A9BED0F1B6EA211007325B6 /* SDRecentlyViewedProductsViewController.swift */,
+				4A9BED111B6F2F97007325B6 /* SDProductsViewController.swift */,
+				4A9BED131B6F31CF007325B6 /* SDProductsCollectionViewCell.swift */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -694,6 +700,7 @@
 				4A9BECFA1B6D6C83007325B6 /* WdigetHeaderReuseableView.swift in Sources */,
 				4A9BED051B6E9308007325B6 /* SDListingStatusTableViewController.swift in Sources */,
 				4A503B921B6A7E970072454E /* SDAppearanceManager.swift in Sources */,
+				4A9BED141B6F31CF007325B6 /* SDProductsCollectionViewCell.swift in Sources */,
 				4A9BECFC1B6DF7BD007325B6 /* SDScrollDecorationView.swift in Sources */,
 				4A9BED011B6E2B4B007325B6 /* SDMoreTableViewController.swift in Sources */,
 				4A9BED081B6EA16C007325B6 /* SDProductsBaseCollectionViewController.swift in Sources */,
@@ -702,6 +709,7 @@
 				4AAF9AA51B6A956B0045472F /* SDRegisterTableViewController.swift in Sources */,
 				4A503B971B6A7F630072454E /* SDLoginViewController.swift in Sources */,
 				4A9BECFE1B6DF81F007325B6 /* SDSellProductsViewController.swift in Sources */,
+				4A9BED121B6F2F97007325B6 /* SDProductsViewController.swift in Sources */,
 				4A9BED101B6EA211007325B6 /* SDRecentlyViewedProductsViewController.swift in Sources */,
 				4A9BED031B6E2DD5007325B6 /* SDNotificationsTableViewController.swift in Sources */,
 				4A9BECF81B6D4527007325B6 /* SDSectionHeader.swift in Sources */,

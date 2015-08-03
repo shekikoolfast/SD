@@ -7,29 +7,57 @@
 //
 
 import UIKit
+import SDNetworkManager
 
-class SDAllProductsViewController: SDProductsBaseCollectionViewController {
-
-    override func viewDidLoad() {
+class SDAllProductsViewController: UICollectionViewController
+{
+    var dataSouceAllProducts = [[String: AnyObject]]()
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
+        var v = SDNetworkManager()
+        v.fetchAllProductsData { (arrAllProducts, isSuccessful) -> Void in
+            if isSuccessful
+            {
+                if let arrProducts = arrAllProducts
+                {
+                    self.dataSouceAllProducts += arrProducts
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        self.collectionView?.reloadData()
+                    })
+                }
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension SDAllProductsViewController: UICollectionViewDataSource
+{
+    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return dataSouceAllProducts.count
     }
-    */
+    
+    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("allProductsCell", forIndexPath: indexPath) as! SDProductsCollectionViewCell
+        cell.contentView.backgroundColor = UIColor.whiteColor()
+        cell.configureProductsData(dictProduct: dataSouceAllProducts[indexPath.row])
+        return cell
+    }
+}
 
+extension SDAllProductsViewController: UICollectionViewDelegateFlowLayout
+{
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize
+    {
+        return CGSizeMake(CGRectGetWidth(self.view.frame), 185)
+    }
 }

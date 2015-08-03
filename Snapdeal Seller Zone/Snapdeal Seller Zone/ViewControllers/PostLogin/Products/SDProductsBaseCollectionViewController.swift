@@ -8,7 +8,7 @@
 
 import UIKit
 
-let reuseIdentifier = "Cell"
+let reuseIdentifier = "allProductsCell"
 
 class SDProductsBaseCollectionViewController: UICollectionViewController {
 
@@ -32,14 +32,4 @@ class SDProductsBaseCollectionViewController: UICollectionViewController {
     }
 
     // MARK: UICollectionViewDataSource
-
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
-    }
-
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! UICollectionViewCell
-    
-        return cell
-    }
 }
