@@ -10,7 +10,13 @@ import UIKit
 
 class SDSectionHeader: UICollectionViewFlowLayout
 {
-    override func layoutAttributesForDecorationViewOfKind(elementKind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes! {
+    override func shouldInvalidateLayoutForBoundsChange(newBounds: CGRect) -> Bool {
+        // Return true so we're asked for layout attributes as the content is scrolled
+        return true
+    }
+    
+    override func layoutAttributesForDecorationViewOfKind(elementKind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes!
+    {
         var layoutAttributes = UICollectionViewLayoutAttributes(forDecorationViewOfKind: elementKind, withIndexPath: indexPath)
         layoutAttributes.frame = CGRect(x: 0, y: 0, width: 320, height: 50)
         layoutAttributes.zIndex = -1
@@ -19,6 +25,7 @@ class SDSectionHeader: UICollectionViewFlowLayout
     
     override func layoutAttributesForElementsInRect(rect: CGRect) -> [AnyObject]?
     {
+        //super.layoutAttributesForElementsInRect(rect) as? [UICollectionViewLayoutAttributes]
         var array = [UICollectionViewLayoutAttributes]()
         var indexPath = NSIndexPath(forItem: 0, inSection: 0)
         array.append(self.layoutAttributesForDecorationViewOfKind("FloorPlan", atIndexPath: indexPath))

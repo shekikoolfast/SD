@@ -280,6 +280,12 @@
                                                 <constraint firstAttribute="height" constant="75" id="sSA-l0-zb6"/>
                                             </constraints>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SKU" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZA-8E-g2U">
+                                            <rect key="frame" x="91" y="79" width="30" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attributes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHz-m9-vhf">
                                             <rect key="frame" x="91" y="58" width="63" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -334,16 +340,19 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SKU" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZA-8E-g2U">
-                                            <rect key="frame" x="91" y="79" width="30" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vkr-ok-4L2">
+                                            <rect key="frame" x="303" y="119" width="60" height="21"/>
+                                            <color key="backgroundColor" red="0.1215686275" green="0.52941176469999995" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="7ti-oL-W70"/>
+                                                <constraint firstAttribute="height" constant="21" id="aJJ-OA-Tk4"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
+                                    <constraint firstItem="n2I-uQ-BKK" firstAttribute="centerY" secondItem="vkr-ok-4L2" secondAttribute="centerY" id="25o-Q8-LZp"/>
                                     <constraint firstItem="wcZ-1C-CgA" firstAttribute="leading" secondItem="VHr-KT-67Y" secondAttribute="leading" constant="8" id="35H-T1-z1b"/>
                                     <constraint firstItem="zHz-m9-vhf" firstAttribute="centerY" secondItem="zDu-Rf-CJT" secondAttribute="centerY" id="3Ai-sh-dQh"/>
                                     <constraint firstItem="dsl-on-L1l" firstAttribute="leading" secondItem="NmX-mg-hMS" secondAttribute="trailing" constant="8" id="4rx-Fv-DTm"/>
@@ -357,6 +366,7 @@
                                     <constraint firstItem="GZA-8E-g2U" firstAttribute="top" secondItem="zHz-m9-vhf" secondAttribute="bottom" constant="4" id="J7i-cv-BoJ"/>
                                     <constraint firstItem="GZA-8E-g2U" firstAttribute="top" secondItem="zrb-qI-zps" secondAttribute="top" id="K3i-M9-ewB"/>
                                     <constraint firstItem="NmX-mg-hMS" firstAttribute="leading" secondItem="qej-mW-dxf" secondAttribute="leading" id="K8w-hc-BDb"/>
+                                    <constraint firstItem="vkr-ok-4L2" firstAttribute="leading" secondItem="n2I-uQ-BKK" secondAttribute="trailing" constant="8" id="LTR-19-T8V"/>
                                     <constraint firstItem="n2I-uQ-BKK" firstAttribute="leading" secondItem="NmX-mg-hMS" secondAttribute="trailing" constant="131" id="LgP-9l-nIM"/>
                                     <constraint firstItem="BVY-Cs-275" firstAttribute="top" secondItem="zrb-qI-zps" secondAttribute="bottom" constant="4" id="MLu-Bz-jj1"/>
                                     <constraint firstItem="yMO-oO-cP1" firstAttribute="centerY" secondItem="cUa-6Y-vSi" secondAttribute="centerY" id="Mlx-eZ-Ucj"/>
@@ -385,6 +395,7 @@
                                     <outlet property="lblSKU" destination="zrb-qI-zps" id="2t4-UD-dab"/>
                                     <outlet property="lblSellingPrice" destination="n2I-uQ-BKK" id="pfp-q1-BP2"/>
                                     <outlet property="lblStatus" destination="wcZ-1C-CgA" id="nZk-rX-1Qs"/>
+                                    <outlet property="statusHeight" destination="KzC-I2-ivv" id="r9V-kG-PJj"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -1134,7 +1145,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UqN-le-WQN">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="1" id="Ie2-fv-l3e" customClass="SDStickyHeaderLayout" customModule="Snapdeal_Seller_Zone" customModuleProvider="target">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="1" id="Ie2-fv-l3e" customClass="SDSectionHeader" customModule="Snapdeal_Seller_Zone" customModuleProvider="target">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="50" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>

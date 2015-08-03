@@ -19,6 +19,7 @@ let Attributes = "productAttributes"
 
 class SDProductsCollectionViewCell: UICollectionViewCell
 {
+    @IBOutlet weak var statusHeight: NSLayoutConstraint!
     @IBOutlet weak var lblStatus: UILabel!
     @IBOutlet weak var imgProductImage: UIImageView!
     @IBOutlet weak var lblName: UILabel!
@@ -30,7 +31,8 @@ class SDProductsCollectionViewCell: UICollectionViewCell
     
     func configureProductsData(#dictProduct: [String: AnyObject])
     {
-        lblStatus.text = dictProduct[Status] as? String
+        statusHeight.constant = 0
+        lblStatus.text = ""//dictProduct[Status] as? String
         lblName.text = dictProduct[Name] as? String
         lblCompetitivePrice.text = dictProduct[CompetitivePrice] as? String
         lblSellingPrice.text = dictProduct[SellingPrice] as? String

@@ -67,7 +67,6 @@ extension SDSellProductsViewController: UICollectionViewDelegate
     
 }
 
-
 extension SDSellProductsViewController: UICollectionViewDelegateFlowLayout
 {
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize

@@ -8,7 +8,8 @@
 
 import UIKit
 
-class SDScrollDecorationView: UICollectionReusableView {
+class SDScrollDecorationView: UICollectionReusableView
+{
     override init(frame: CGRect) {
         var view = UIView(frame: frame)
         view.backgroundColor = UIColor.redColor()

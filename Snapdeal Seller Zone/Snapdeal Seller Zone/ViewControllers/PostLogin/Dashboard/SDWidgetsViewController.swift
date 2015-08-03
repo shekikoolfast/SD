@@ -19,6 +19,8 @@ class SDWidgetsViewController: UIViewController {
         collectionView.addSubview(refreshControl)
         
         var layout = collectionView.collectionViewLayout
+        println(layout)
+        layout.registerClass(SDScrollDecorationView.self, forDecorationViewOfKind: "FloorPlan")
         createBarButtons()
     }
 
@@ -69,7 +71,7 @@ extension SDWidgetsViewController: UICollectionViewDataSource
         if kind == UICollectionElementKindSectionHeader
         {
             let headerCell = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "HeaderView", forIndexPath: indexPath) as! UICollectionReusableView
-            headerCell.backgroundColor = UIColor.greenColor()
+            headerCell.backgroundColor = UIColor.grayColor()
             return headerCell
         }
         return UICollectionReusableView()
@@ -83,7 +85,7 @@ extension SDWidgetsViewController: UICollectionViewDataSource
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("WidgetCell", forIndexPath: indexPath) as! UICollectionViewCell
-        cell.backgroundColor = UIColor.redColor()
+        cell.backgroundColor = UIColor.whiteColor()
 
         return cell
     }
