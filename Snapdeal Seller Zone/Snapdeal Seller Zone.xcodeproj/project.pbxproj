@@ -27,6 +27,7 @@
 		4A54B24F1B68C630006CBA9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A54B24E1B68C630006CBA9A /* Images.xcassets */; };
 		4A54B2521B68C630006CBA9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A54B2501B68C630006CBA9A /* LaunchScreen.xib */; };
 		4A54B25E1B68C630006CBA9A /* Snapdeal_Seller_ZoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54B25D1B68C630006CBA9A /* Snapdeal_Seller_ZoneTests.swift */; };
+		4A86D9AA1B713BC5004907CD /* SDProductDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86D9A91B713BC5004907CD /* SDProductDetailsTableViewController.swift */; };
 		4A9BECF61B6D44EB007325B6 /* SDStickyHeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BECF51B6D44EB007325B6 /* SDStickyHeaderLayout.swift */; };
 		4A9BECF81B6D4527007325B6 /* SDSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BECF71B6D4527007325B6 /* SDSectionHeader.swift */; };
 		4A9BECFA1B6D6C83007325B6 /* WdigetHeaderReuseableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BECF91B6D6C83007325B6 /* WdigetHeaderReuseableView.swift */; };
@@ -142,6 +143,7 @@
 		4A54B2571B68C630006CBA9A /* Snapdeal Seller ZoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Snapdeal Seller ZoneTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A54B25C1B68C630006CBA9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A54B25D1B68C630006CBA9A /* Snapdeal_Seller_ZoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snapdeal_Seller_ZoneTests.swift; sourceTree = "<group>"; };
+		4A86D9A91B713BC5004907CD /* SDProductDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDProductDetailsTableViewController.swift; sourceTree = "<group>"; };
 		4A9BECF51B6D44EB007325B6 /* SDStickyHeaderLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDStickyHeaderLayout.swift; sourceTree = "<group>"; };
 		4A9BECF71B6D4527007325B6 /* SDSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDSectionHeader.swift; sourceTree = "<group>"; };
 		4A9BECF91B6D6C83007325B6 /* WdigetHeaderReuseableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WdigetHeaderReuseableView.swift; sourceTree = "<group>"; };
@@ -417,6 +419,7 @@
 				4A9BED0F1B6EA211007325B6 /* SDRecentlyViewedProductsViewController.swift */,
 				4A9BED111B6F2F97007325B6 /* SDProductsViewController.swift */,
 				4A9BED131B6F31CF007325B6 /* SDProductsCollectionViewCell.swift */,
+				4A86D9A91B713BC5004907CD /* SDProductDetailsTableViewController.swift */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -704,6 +707,7 @@
 				4A9BECFC1B6DF7BD007325B6 /* SDScrollDecorationView.swift in Sources */,
 				4A9BED011B6E2B4B007325B6 /* SDMoreTableViewController.swift in Sources */,
 				4A9BED081B6EA16C007325B6 /* SDProductsBaseCollectionViewController.swift in Sources */,
+				4A86D9AA1B713BC5004907CD /* SDProductDetailsTableViewController.swift in Sources */,
 				4A9BECF61B6D44EB007325B6 /* SDStickyHeaderLayout.swift in Sources */,
 				4A0F695F1B6BEA0A008D350E /* SDWidgetsViewController.swift in Sources */,
 				4AAF9AA51B6A956B0045472F /* SDRegisterTableViewController.swift in Sources */,

@@ -14,6 +14,18 @@ class SDListingStatusTableViewController: UITableViewController {
         super.viewDidLoad()
         var btnSearch = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: "handleTapOnSearch")
         self.navigationItem.rightBarButtonItem = btnSearch
+        
+        var refreshCtrl = UIRefreshControl()
+        var title = NSAttributedString(string: "Refreshing Product Listing status")
+        refreshCtrl.attributedTitle = title
+        refreshCtrl.addTarget(self, action: "handlePullToRefresh:", forControlEvents: .ValueChanged)
+        refreshControl = refreshCtrl
+    }
+    
+    func handlePullToRefresh(sender: UIRefreshControl)
+    {
+        sleep(2)
+        sender.endRefreshing()
     }
     
     func handleTapOnSearch()

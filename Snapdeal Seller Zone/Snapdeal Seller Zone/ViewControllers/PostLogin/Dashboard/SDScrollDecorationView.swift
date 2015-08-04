@@ -12,7 +12,7 @@ class SDScrollDecorationView: UICollectionReusableView
 {
     override init(frame: CGRect) {
         var view = UIView(frame: frame)
-        view.backgroundColor = UIColor.redColor()
+        view.backgroundColor = UIColor.orangeColor()
         super.init(frame: frame)
     }
 

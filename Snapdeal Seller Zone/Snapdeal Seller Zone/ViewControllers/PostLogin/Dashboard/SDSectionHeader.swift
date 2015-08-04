@@ -19,7 +19,7 @@ class SDSectionHeader: UICollectionViewFlowLayout
     {
         var layoutAttributes = UICollectionViewLayoutAttributes(forDecorationViewOfKind: elementKind, withIndexPath: indexPath)
         layoutAttributes.frame = CGRect(x: 0, y: 0, width: 320, height: 50)
-        layoutAttributes.zIndex = -1
+        layoutAttributes.zIndex = 2
         return layoutAttributes
     }
     

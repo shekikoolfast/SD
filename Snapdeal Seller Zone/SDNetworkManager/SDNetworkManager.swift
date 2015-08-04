@@ -8,8 +8,15 @@
 
 import UIKit
 
+public typealias CompletionHandler = ([[String: AnyObject]]?, Bool) -> Void
+
+let baseURL = NSURL(string: "http://www.json-generator.com/api/json/get/")
+
 public class SDNetworkManager: NSObject
 {
+    
+//    var block = CompletionHandler?()
+    
     public class var sharedInstance :SDNetworkManager
     {
         struct Singleton
@@ -24,6 +31,26 @@ public class SDNetworkManager: NSObject
         print("2")
     }
     
+    public func fetchAllProductsData(#completionHandler: CompletionHandler)
+    {
+        var url = NSURL(string: "ccOficoHNe", relativeToURL: baseURL)
+        var session: Void = NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler: { (data, urlResponse, error) -> Void in
+            if let err = error
+            {
+                println("Parsing Error")
+                completionHandler(nil, false)
+            }
+            else
+            {
+                var error = NSErrorPointer()
+                var json = NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments, error: error) as! [[String: AnyObject]]
+                println( "toString(myvar0.dynamicType) -> \(json.dynamicType)")
+                println(error)
+                println(json)
+                completionHandler(json, true)
+            }
+        }).resume()
+    }
     
     
 }

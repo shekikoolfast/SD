@@ -17,11 +17,6 @@ class SDAllProductsViewController: UICollectionViewController
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        var refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: "handlePullToRefresh:", forControlEvents: .ValueChanged)
-        self.collectionView!.addSubview(refreshControl)
-        
         var v = SDNetworkManager()
         v.fetchAllProductsData { (arrAllProducts, isSuccessful) -> Void in
             if isSuccessful
@@ -37,12 +32,6 @@ class SDAllProductsViewController: UICollectionViewController
         }
     }
     
-    func handlePullToRefresh(sender: UIRefreshControl)
-    {
-        sleep(2)
-        sender.endRefreshing()
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -61,6 +50,13 @@ extension SDAllProductsViewController: UICollectionViewDataSource
         cell.contentView.backgroundColor = UIColor.whiteColor()
         cell.configureProductsData(dictProduct: dataSouceAllProducts[indexPath.row])
         return cell
+    }
+}
+
+extension SDAllProductsViewController: UICollectionViewDelegate
+{
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("segueProductDetail", sender: nil)
     }
 }
 

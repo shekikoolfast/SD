@@ -15,10 +15,10 @@ class SDSellProductsViewController: UIViewController {
         super.viewDidLoad()
 
         var header = collectionView.collectionViewLayout
-        //header.registerClass(SDScrollDecorationView.self, forDecorationViewOfKind: "FloorPlan")
+        header.registerClass(SDScrollDecorationView.self, forDecorationViewOfKind: "FloorPlan")
         
         // Do any additional setup after loading the view.
-        navigationController?.hidesBarsOnSwipe = true
+//        navigationController?.hidesBarsOnSwipe = true
         
     }
 
