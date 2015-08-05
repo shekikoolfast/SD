@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDNetworkManager
 
 class SDWidgetsViewController: UIViewController {
 
@@ -22,6 +23,9 @@ class SDWidgetsViewController: UIViewController {
         println(layout)
         layout.registerClass(SDScrollDecorationView.self, forDecorationViewOfKind: "FloorPlan")
         createBarButtons()
+        
+        refreshControl.beginRefreshing()
+        handlePullToRefresh(refreshControl)
     }
 
     private func createBarButtons()
@@ -52,10 +56,13 @@ class SDWidgetsViewController: UIViewController {
     
     func handlePullToRefresh(sender: UIRefreshControl)
     {
-        sleep(2)
-        sender.endRefreshing()
+        var v = SDNetworkManager()
+        v.fetchDashboardData { (data, isSuccessful) -> Void in
+            println(data)
+            sleep(2)
+            sender.endRefreshing()
+        }
     }
-
 }
 
 

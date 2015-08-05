@@ -78,6 +78,7 @@ class SDLoginViewController: UIViewController, UITextFieldDelegate
     
     @IBAction func handleTapOnRegister(sender: UIButton)
     {
+        
         performSegueWithIdentifier("SGRegistration", sender: nil)
     }
     
@@ -99,10 +100,10 @@ class SDLoginViewController: UIViewController, UITextFieldDelegate
     }
 }
 
+//MARK:
+//MARK: UITextFieldDelegate Methods
 extension SDLoginViewController: UITextFieldDelegate
 {
-    //MARK:
-    //MARK: UITextFieldDelegate Methods
     func textFieldShouldReturn(textField: UITextField) -> Bool
     {
         if textField == self.tfEmailID
@@ -116,11 +117,21 @@ extension SDLoginViewController: UITextFieldDelegate
         return true
     }
     
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool
+    {
         if textField == self.tfEmailID
         {
             var isEmailValid = isValidEmail(testStr: textField.text)
             okAction1?.enabled = isEmailValid
+        }
+        else if textField == self.tfUsername
+        {
+            var isEmailValid = isValidEmail(testStr: textField.text)
+//            let resultPredicate = NSPredicate(format: "self isKindOfClass: %@", NSClassFromString("UIKeyboard"))
+//            if let keyboard = view.subviews.filter{resultPredicate.evaluateWithObject($0)}
+//            {
+//                println(keyboard)
+//            }
         }
         return true
         

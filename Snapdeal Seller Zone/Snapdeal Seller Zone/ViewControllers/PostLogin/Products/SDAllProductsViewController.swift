@@ -24,9 +24,7 @@ class SDAllProductsViewController: UICollectionViewController
                 if let arrProducts = arrAllProducts
                 {
                     self.dataSouceAllProducts += arrProducts
-                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        self.collectionView?.reloadData()
-                    })
+                    self.collectionView?.reloadData()
                 }
             }
         }

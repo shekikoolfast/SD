@@ -8,7 +8,7 @@
 
 import UIKit
 
-public typealias CompletionHandler = ([[String: AnyObject]]?, Bool) -> Void
+public typealias CompletionHandler = (data:[[String: AnyObject]]?, isSuccessful: Bool) -> Void
 
 let baseURL = NSURL(string: "http://www.json-generator.com/api/json/get/")
 
@@ -31,6 +31,24 @@ public class SDNetworkManager: NSObject
         print("2")
     }
     
+    public func performLogin(#email: String, password: String)
+    {
+        
+    }
+    
+    public func fetchDashboardData(#completionHandler: CompletionHandler)
+    {
+        /*
+         * Get the application configuration from the specified URL.
+         * Parse the information, save the data to the SDUserDefaults.
+         * Get the list of widgets whose infomation needs to be displayed.
+         * Create and array of DataSource and return to the contorller on the main thread.
+         */
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            completionHandler(data: nil, isSuccessful: false)
+        })
+    }
+    
     public func fetchAllProductsData(#completionHandler: CompletionHandler)
     {
         var url = NSURL(string: "ccOficoHNe", relativeToURL: baseURL)
@@ -38,7 +56,9 @@ public class SDNetworkManager: NSObject
             if let err = error
             {
                 println("Parsing Error")
-                completionHandler(nil, false)
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    completionHandler(data: nil, isSuccessful: false)
+                })
             }
             else
             {
@@ -47,10 +67,10 @@ public class SDNetworkManager: NSObject
                 println( "toString(myvar0.dynamicType) -> \(json.dynamicType)")
                 println(error)
                 println(json)
-                completionHandler(json, true)
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    completionHandler(data: json, isSuccessful: true)
+                })
             }
         }).resume()
     }
-    
-    
 }
