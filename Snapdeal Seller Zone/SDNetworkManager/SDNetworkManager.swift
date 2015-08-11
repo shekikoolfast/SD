@@ -49,6 +49,16 @@ public class SDNetworkManager: NSObject
         })
     }
     
+    func fetchApplicationConfiguration(#completionHandler: CompletionHandler)
+    {
+        
+    }
+    
+    func fetchAvailableWidgetConfiguration(#completionHandler: CompletionHandler)
+    {
+        
+    }
+    
     public func fetchAllProductsData(#completionHandler: CompletionHandler)
     {
         var url = NSURL(string: "ccOficoHNe", relativeToURL: baseURL)

@@ -45,3 +45,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate
+{
+    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError)
+    {
+        print("Failed to register to APNS with Error \(error.localizedDescription)")
+    }
+    
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject])
+    {
+        print("Received Push notification from APNS \(userInfo)")
+    }
+    
+    func application(application: UIApplication, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings) {
+        
+    }
+    
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+        
+    }
+}
+
+

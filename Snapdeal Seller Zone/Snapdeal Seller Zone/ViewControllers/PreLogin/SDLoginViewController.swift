@@ -43,6 +43,11 @@ class SDLoginViewController: UIViewController, UITextFieldDelegate
         tfPassword.rightViewMode = .Always
         tfPassword.rightView = btnForgotPassword
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBarHidden = true
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -124,17 +129,7 @@ extension SDLoginViewController: UITextFieldDelegate
             var isEmailValid = isValidEmail(testStr: textField.text)
             okAction1?.enabled = isEmailValid
         }
-        else if textField == self.tfUsername
-        {
-            var isEmailValid = isValidEmail(testStr: textField.text)
-//            let resultPredicate = NSPredicate(format: "self isKindOfClass: %@", NSClassFromString("UIKeyboard"))
-//            if let keyboard = view.subviews.filter{resultPredicate.evaluateWithObject($0)}
-//            {
-//                println(keyboard)
-//            }
-        }
         return true
-        
     }
     
     func isValidEmail(#testStr:String) -> Bool
