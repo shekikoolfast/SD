@@ -34,6 +34,7 @@
 		4A6BD59E1B7A384F002D3D7A /* SDBusinessDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD59D1B7A384F002D3D7A /* SDBusinessDetailsTableViewController.swift */; };
 		4A6BD5A01B7A38BC002D3D7A /* SDContractViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD59F1B7A38BC002D3D7A /* SDContractViewController.swift */; };
 		4A6BD5A21B7A38E5002D3D7A /* SDRegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5A11B7A38E5002D3D7A /* SDRegisterPageViewController.swift */; };
+		4A6BD5A41B7B0D9D002D3D7A /* SDHelpTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5A31B7B0D9D002D3D7A /* SDHelpTextField.swift */; };
 		4A86D9AA1B713BC5004907CD /* SDProductDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86D9A91B713BC5004907CD /* SDProductDetailsTableViewController.swift */; };
 		4A9BECF61B6D44EB007325B6 /* SDStickyHeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BECF51B6D44EB007325B6 /* SDStickyHeaderLayout.swift */; };
 		4A9BECF81B6D4527007325B6 /* SDSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BECF71B6D4527007325B6 /* SDSectionHeader.swift */; };
@@ -157,6 +158,7 @@
 		4A6BD59D1B7A384F002D3D7A /* SDBusinessDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDBusinessDetailsTableViewController.swift; sourceTree = "<group>"; };
 		4A6BD59F1B7A38BC002D3D7A /* SDContractViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDContractViewController.swift; sourceTree = "<group>"; };
 		4A6BD5A11B7A38E5002D3D7A /* SDRegisterPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDRegisterPageViewController.swift; sourceTree = "<group>"; };
+		4A6BD5A31B7B0D9D002D3D7A /* SDHelpTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDHelpTextField.swift; sourceTree = "<group>"; };
 		4A86D9A91B713BC5004907CD /* SDProductDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDProductDetailsTableViewController.swift; sourceTree = "<group>"; };
 		4A9BECF51B6D44EB007325B6 /* SDStickyHeaderLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDStickyHeaderLayout.swift; sourceTree = "<group>"; };
 		4A9BECF71B6D4527007325B6 /* SDSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDSectionHeader.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 			children = (
 				4A503B911B6A7E970072454E /* SDAppearanceManager.swift */,
 				4A3551CE1B752D7500F1B0DE /* SDKeyboardAccessoryView.swift */,
+				4A6BD5A31B7B0D9D002D3D7A /* SDHelpTextField.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -722,6 +725,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A9BECFA1B6D6C83007325B6 /* WdigetHeaderReuseableView.swift in Sources */,
+				4A6BD5A41B7B0D9D002D3D7A /* SDHelpTextField.swift in Sources */,
 				4A9BED051B6E9308007325B6 /* SDListingStatusTableViewController.swift in Sources */,
 				4A503B921B6A7E970072454E /* SDAppearanceManager.swift in Sources */,
 				4A9BED141B6F31CF007325B6 /* SDProductsCollectionViewCell.swift in Sources */,
