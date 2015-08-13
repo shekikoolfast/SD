@@ -17,17 +17,17 @@ class SDAllProductsViewController: UICollectionViewController
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        var v = SDNetworkManager()
-        v.fetchAllProductsData { (arrAllProducts, isSuccessful) -> Void in
-            if isSuccessful
-            {
-                if let arrProducts = arrAllProducts
-                {
-                    self.dataSouceAllProducts += arrProducts
-                    self.collectionView?.reloadData()
-                }
-            }
-        }
+//        var v = SDNetworkManager()
+//        v.fetchAllProductsData { (arrAllProducts, isSuccessful) -> Void in
+//            if isSuccessful
+//            {
+//                if let arrProducts = arrAllProducts
+//                {
+//                    self.dataSouceAllProducts += arrProducts
+//                    self.collectionView?.reloadData()
+//                }
+//            }
+//        }
     }
     
     override func didReceiveMemoryWarning() {

@@ -20,8 +20,8 @@ class SDAppearanceManager: NSObject
 //        UINavigationBar.appearance().backIndicatorImage
         UICollectionView.appearance().backgroundColor = UIColor.groupTableViewBackgroundColor()
         UITableView.appearance().backgroundColor = UIColor.groupTableViewBackgroundColor()
-        UINavigationBar.appearance().tintColor = UIColor.cyanColor()
-        UINavigationBar.appearance().barTintColor = UIColor.redColor()
+        UINavigationBar.appearance().tintColor = UIColor.blackColor()
+        UINavigationBar.appearance().barTintColor = UIColor.cyanColor()
         UITabBar.appearance().tintColor = UIColor.brownColor()
         UITabBar.appearance().barTintColor = UIColor.purpleColor()
         UISearchBar.appearance().barTintColor = UIColor.whiteColor()

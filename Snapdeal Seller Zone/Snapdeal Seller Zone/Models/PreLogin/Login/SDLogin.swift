@@ -8,6 +8,18 @@
 
 import UIKit
 
-class SDLogin: SDBaseModel {
-   
+class SDLogin: SDBaseModel
+{
+    var isAuthenticated = false
+    var strSellerCode: String? = nil
+    var isAuthorized = false
+    var strFailureReason: String? = nil
+    
+    var arrPrivilages = [String]()
+    
+    override init(json: AnyObject)
+    {
+        super.init(json: json)
+    }
+    
 }

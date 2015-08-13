@@ -35,6 +35,21 @@
 		4A6BD5A01B7A38BC002D3D7A /* SDContractViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD59F1B7A38BC002D3D7A /* SDContractViewController.swift */; };
 		4A6BD5A21B7A38E5002D3D7A /* SDRegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5A11B7A38E5002D3D7A /* SDRegisterPageViewController.swift */; };
 		4A6BD5A41B7B0D9D002D3D7A /* SDHelpTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5A31B7B0D9D002D3D7A /* SDHelpTextField.swift */; };
+		4A6BD5A61B7B9ACC002D3D7A /* SDDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5A51B7B9ACC002D3D7A /* SDDataManager.swift */; };
+		4A6BD5B11B7B9DE8002D3D7A /* SDBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5B01B7B9DE8002D3D7A /* SDBaseModel.swift */; };
+		4A6BD5B21B7B9DE8002D3D7A /* SDBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5B01B7B9DE8002D3D7A /* SDBaseModel.swift */; };
+		4A6BD5B31B7B9DE8002D3D7A /* SDBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5B01B7B9DE8002D3D7A /* SDBaseModel.swift */; };
+		4A6BD5B41B7B9DE8002D3D7A /* SDBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5B01B7B9DE8002D3D7A /* SDBaseModel.swift */; };
+		4A6BD5B61B7BA201002D3D7A /* SDLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5B51B7BA201002D3D7A /* SDLogin.swift */; };
+		4A6BD5B71B7BA201002D3D7A /* SDLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5B51B7BA201002D3D7A /* SDLogin.swift */; };
+		4A6BD5B81B7BA201002D3D7A /* SDLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5B51B7BA201002D3D7A /* SDLogin.swift */; };
+		4A6BD5B91B7BA201002D3D7A /* SDLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5B51B7BA201002D3D7A /* SDLogin.swift */; };
+		4A6BD5C01B7BAAAE002D3D7A /* SDFetchDataOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5BF1B7BAAAE002D3D7A /* SDFetchDataOperation.swift */; };
+		4A6BD5C11B7BAAAE002D3D7A /* SDFetchDataOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5BF1B7BAAAE002D3D7A /* SDFetchDataOperation.swift */; };
+		4A6BD5C31B7BAABD002D3D7A /* SDParseDataOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5C21B7BAABD002D3D7A /* SDParseDataOperation.swift */; };
+		4A6BD5C41B7BAABD002D3D7A /* SDParseDataOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5C21B7BAABD002D3D7A /* SDParseDataOperation.swift */; };
+		4A6BD5C61B7BAED6002D3D7A /* SDLoginOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5C51B7BAED6002D3D7A /* SDLoginOperation.swift */; };
+		4A6BD5C71B7BAED6002D3D7A /* SDLoginOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5C51B7BAED6002D3D7A /* SDLoginOperation.swift */; };
 		4A86D9AA1B713BC5004907CD /* SDProductDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86D9A91B713BC5004907CD /* SDProductDetailsTableViewController.swift */; };
 		4A9BECF61B6D44EB007325B6 /* SDStickyHeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BECF51B6D44EB007325B6 /* SDStickyHeaderLayout.swift */; };
 		4A9BECF81B6D4527007325B6 /* SDSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BECF71B6D4527007325B6 /* SDSectionHeader.swift */; };
@@ -159,6 +174,12 @@
 		4A6BD59F1B7A38BC002D3D7A /* SDContractViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDContractViewController.swift; sourceTree = "<group>"; };
 		4A6BD5A11B7A38E5002D3D7A /* SDRegisterPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDRegisterPageViewController.swift; sourceTree = "<group>"; };
 		4A6BD5A31B7B0D9D002D3D7A /* SDHelpTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDHelpTextField.swift; sourceTree = "<group>"; };
+		4A6BD5A51B7B9ACC002D3D7A /* SDDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDDataManager.swift; sourceTree = "<group>"; };
+		4A6BD5B01B7B9DE8002D3D7A /* SDBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDBaseModel.swift; sourceTree = "<group>"; };
+		4A6BD5B51B7BA201002D3D7A /* SDLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDLogin.swift; sourceTree = "<group>"; };
+		4A6BD5BF1B7BAAAE002D3D7A /* SDFetchDataOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDFetchDataOperation.swift; sourceTree = "<group>"; };
+		4A6BD5C21B7BAABD002D3D7A /* SDParseDataOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDParseDataOperation.swift; sourceTree = "<group>"; };
+		4A6BD5C51B7BAED6002D3D7A /* SDLoginOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDLoginOperation.swift; sourceTree = "<group>"; };
 		4A86D9A91B713BC5004907CD /* SDProductDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDProductDetailsTableViewController.swift; sourceTree = "<group>"; };
 		4A9BECF51B6D44EB007325B6 /* SDStickyHeaderLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDStickyHeaderLayout.swift; sourceTree = "<group>"; };
 		4A9BECF71B6D4527007325B6 /* SDSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDSectionHeader.swift; sourceTree = "<group>"; };
@@ -245,7 +266,10 @@
 		4A503B421B6A70C00072454E /* SDNetworkManager */ = {
 			isa = PBXGroup;
 			children = (
+				4A6BD5C51B7BAED6002D3D7A /* SDLoginOperation.swift */,
 				4A503B611B6A70FE0072454E /* SDNetworkManager.swift */,
+				4A6BD5BF1B7BAAAE002D3D7A /* SDFetchDataOperation.swift */,
+				4A6BD5C21B7BAABD002D3D7A /* SDParseDataOperation.swift */,
 				4A503B451B6A70C00072454E /* SDNetworkManager.h */,
 				4A503B431B6A70C00072454E /* Supporting Files */,
 			);
@@ -317,6 +341,7 @@
 				4A503B911B6A7E970072454E /* SDAppearanceManager.swift */,
 				4A3551CE1B752D7500F1B0DE /* SDKeyboardAccessoryView.swift */,
 				4A6BD5A31B7B0D9D002D3D7A /* SDHelpTextField.swift */,
+				4A6BD5A51B7B9ACC002D3D7A /* SDDataManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -387,6 +412,7 @@
 		4A54B2441B68C62F006CBA9A /* Snapdeal Seller Zone */ = {
 			isa = PBXGroup;
 			children = (
+				4A6BD5A71B7B9D44002D3D7A /* Models */,
 				4A503B931B6A7EC60072454E /* ViewControllers */,
 				4A503B901B6A7E970072454E /* Managers */,
 				4A54B2471B68C630006CBA9A /* AppDelegate.swift */,
@@ -420,6 +446,79 @@
 				4A54B25C1B68C630006CBA9A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4A6BD5A71B7B9D44002D3D7A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4A6BD5B01B7B9DE8002D3D7A /* SDBaseModel.swift */,
+				4A6BD5A81B7B9D44002D3D7A /* AppConfiguration */,
+				4A6BD5A91B7B9D44002D3D7A /* PostLogin */,
+				4A6BD5AD1B7B9D44002D3D7A /* PreLogin */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4A6BD5A81B7B9D44002D3D7A /* AppConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppConfiguration;
+			sourceTree = "<group>";
+		};
+		4A6BD5A91B7B9D44002D3D7A /* PostLogin */ = {
+			isa = PBXGroup;
+			children = (
+				4A6BD5AA1B7B9D44002D3D7A /* Payments */,
+				4A6BD5AB1B7B9D44002D3D7A /* Products */,
+				4A6BD5AC1B7B9D44002D3D7A /* Widgets */,
+			);
+			path = PostLogin;
+			sourceTree = "<group>";
+		};
+		4A6BD5AA1B7B9D44002D3D7A /* Payments */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Payments;
+			sourceTree = "<group>";
+		};
+		4A6BD5AB1B7B9D44002D3D7A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
+		4A6BD5AC1B7B9D44002D3D7A /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		4A6BD5AD1B7B9D44002D3D7A /* PreLogin */ = {
+			isa = PBXGroup;
+			children = (
+				4A6BD5AE1B7B9D44002D3D7A /* Login */,
+				4A6BD5AF1B7B9D44002D3D7A /* Registration */,
+			);
+			path = PreLogin;
+			sourceTree = "<group>";
+		};
+		4A6BD5AE1B7B9D44002D3D7A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4A6BD5B51B7BA201002D3D7A /* SDLogin.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		4A6BD5AF1B7B9D44002D3D7A /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Registration;
 			sourceTree = "<group>";
 		};
 		4A9BECFF1B6E2B3C007325B6 /* More */ = {
@@ -693,7 +792,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A6BD5C61B7BAED6002D3D7A /* SDLoginOperation.swift in Sources */,
+				4A6BD5C31B7BAABD002D3D7A /* SDParseDataOperation.swift in Sources */,
 				4A503B621B6A70FE0072454E /* SDNetworkManager.swift in Sources */,
+				4A6BD5C01B7BAAAE002D3D7A /* SDFetchDataOperation.swift in Sources */,
+				4A6BD5B31B7B9DE8002D3D7A /* SDBaseModel.swift in Sources */,
+				4A6BD5B81B7BA201002D3D7A /* SDLogin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -701,7 +805,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A6BD5C71B7BAED6002D3D7A /* SDLoginOperation.swift in Sources */,
+				4A6BD5C41B7BAABD002D3D7A /* SDParseDataOperation.swift in Sources */,
 				4A503B551B6A70C00072454E /* SDNetworkManagerTests.swift in Sources */,
+				4A6BD5C11B7BAAAE002D3D7A /* SDFetchDataOperation.swift in Sources */,
+				4A6BD5B41B7B9DE8002D3D7A /* SDBaseModel.swift in Sources */,
+				4A6BD5B91B7BA201002D3D7A /* SDLogin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -728,6 +837,7 @@
 				4A6BD5A41B7B0D9D002D3D7A /* SDHelpTextField.swift in Sources */,
 				4A9BED051B6E9308007325B6 /* SDListingStatusTableViewController.swift in Sources */,
 				4A503B921B6A7E970072454E /* SDAppearanceManager.swift in Sources */,
+				4A6BD5A61B7B9ACC002D3D7A /* SDDataManager.swift in Sources */,
 				4A9BED141B6F31CF007325B6 /* SDProductsCollectionViewCell.swift in Sources */,
 				4A9BECFC1B6DF7BD007325B6 /* SDScrollDecorationView.swift in Sources */,
 				4A6BD5A21B7A38E5002D3D7A /* SDRegisterPageViewController.swift in Sources */,
@@ -737,7 +847,9 @@
 				4A86D9AA1B713BC5004907CD /* SDProductDetailsTableViewController.swift in Sources */,
 				4A9BECF61B6D44EB007325B6 /* SDStickyHeaderLayout.swift in Sources */,
 				4A5FC5AF1B760381009278D5 /* SDFillProductInfoTableViewController.swift in Sources */,
+				4A6BD5B61B7BA201002D3D7A /* SDLogin.swift in Sources */,
 				4A0F695F1B6BEA0A008D350E /* SDWidgetsViewController.swift in Sources */,
+				4A6BD5B11B7B9DE8002D3D7A /* SDBaseModel.swift in Sources */,
 				4AAF9AA51B6A956B0045472F /* SDRegisterTableViewController.swift in Sources */,
 				4A503B971B6A7F630072454E /* SDLoginViewController.swift in Sources */,
 				4A9BECFE1B6DF81F007325B6 /* SDSellProductsViewController.swift in Sources */,
@@ -762,6 +874,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A54B25E1B68C630006CBA9A /* Snapdeal_Seller_ZoneTests.swift in Sources */,
+				4A6BD5B21B7B9DE8002D3D7A /* SDBaseModel.swift in Sources */,
+				4A6BD5B71B7BA201002D3D7A /* SDLogin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

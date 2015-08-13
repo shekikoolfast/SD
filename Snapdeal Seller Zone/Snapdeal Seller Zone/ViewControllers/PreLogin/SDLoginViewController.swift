@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import SDNetworkManager
-import SDCoreDataManager
 
 class SDLoginViewController: UIViewController, UITextFieldDelegate
 {
@@ -25,12 +23,6 @@ class SDLoginViewController: UIViewController, UITextFieldDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        var v = SDNetworkManager()
-        v.testMethod()
-        
-        var v1 = SDNetworkManager.sharedInstance
-        v1.testMethod()
         
         // Do any additional setup after loading the view.
         navigationController?.navigationBarHidden = true
@@ -89,6 +81,8 @@ class SDLoginViewController: UIViewController, UITextFieldDelegate
     
     @IBAction func handleTapOnLogin(sender: UIButton)
     {
+        SDDataManager.sharedInstance.handleLogin(email: "abhishek", password: "kumar")
+        
         var storybord = UIStoryboard(name: "PostLogin", bundle: NSBundle.mainBundle())
         var tabbarController = storybord.instantiateInitialViewController() as! SDTabBarController
         navigationController?.setViewControllers([tabbarController], animated: true)
@@ -96,7 +90,6 @@ class SDLoginViewController: UIViewController, UITextFieldDelegate
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         var controller = segue.destinationViewController as! UIViewController
-        controller.navigationController?.navigationBar
     }
 
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent)

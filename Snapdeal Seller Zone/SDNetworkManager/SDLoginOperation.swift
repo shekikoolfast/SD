@@ -8,6 +8,15 @@
 
 import UIKit
 
-class SDLoginOperation: NSOperation {
-   
+class SDLoginOperation: NSOperation
+{
+    override func main()
+    {
+        print("main")        
+    }
+    
+    override func start()
+    {
+        print("start")
+    }
 }

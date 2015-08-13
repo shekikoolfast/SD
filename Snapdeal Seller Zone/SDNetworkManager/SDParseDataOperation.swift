@@ -8,6 +8,7 @@
 
 import UIKit
 
-class SDParseDataOperation: NSOperation {
+class SDParseDataOperation: NSOperation
+{
    
 }

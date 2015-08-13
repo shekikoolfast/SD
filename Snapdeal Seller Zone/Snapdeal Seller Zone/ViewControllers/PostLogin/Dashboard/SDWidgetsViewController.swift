@@ -56,12 +56,12 @@ class SDWidgetsViewController: UIViewController {
     
     func handlePullToRefresh(sender: UIRefreshControl)
     {
-        var v = SDNetworkManager()
-        v.fetchDashboardData { (data, isSuccessful) -> Void in
-            println(data)
+//        var v = SDNetworkManager()
+//        v.fetchDashboardData { (data, isSuccessful) -> Void in
+//            println(data)
             sleep(2)
             sender.endRefreshing()
-        }
+//        }
     }
 }
 

@@ -6,8 +6,29 @@
 //  Copyright (c) 2015 Snapdeal. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class SDFetchDataOperation: NSOperation {
-   
+private var URLSessionTaksOperationKVOContext = 0
+
+class SDFetchDataOperation: NSOperation
+{
+    let url: NSURL?
+
+    init(url: NSURL)
+    {
+        self.url = url
+//        self.qualityOfService = .UserInitiated
+        super.init()
+    }
+    
+    override func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<Void>) {
+        
+    }
+    
+    override func main() {
+        
+    }
+    
+    
+    
 }

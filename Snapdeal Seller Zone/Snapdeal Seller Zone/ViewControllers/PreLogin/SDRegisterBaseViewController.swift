@@ -20,25 +20,26 @@ class SDRegisterBaseViewController: UIViewController
     
     @IBAction func handleTapOnSegmentControl(sender: UISegmentedControl)
     {
-        print(childViewControllers)
         var pageController = childViewControllers[0] as! SDRegisterPageViewController
-        print(pageController.viewControllers)
-        
         switch sender.selectedSegmentIndex
         {
         case 0:
-            
             var sellerVC = storyboard?.instantiateViewControllerWithIdentifier("SDSellerDetailsViewController") as! SDSellerDetailsViewController
             pageController.setViewControllers([sellerVC], direction: .Reverse, animated: true, completion: nil)
             
-            
         case 1:
-            
             var businessVC = storyboard?.instantiateViewControllerWithIdentifier("SDBusinessDetailsTableViewController") as! SDBusinessDetailsTableViewController
-            pageController.setViewControllers([businessVC], direction: .Forward, animated: true, completion: nil)
+            if pageController.viewControllers[0] is SDSellerDetailsViewController
+            {
+                pageController.setViewControllers([businessVC], direction: .Forward, animated: true, completion: nil)
+            }
+            else
+            {
+                pageController.setViewControllers([businessVC], direction: .Reverse, animated: true, completion: nil)
+            }
+            
             
         case 2:
-            
             var contractVC = storyboard?.instantiateViewControllerWithIdentifier("SDContractViewController") as! SDContractViewController
             pageController.setViewControllers([contractVC], direction: .Forward, animated: true, completion: nil)
             

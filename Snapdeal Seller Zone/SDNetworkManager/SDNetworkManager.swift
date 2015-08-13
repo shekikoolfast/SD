@@ -15,8 +15,8 @@ let baseURL = NSURL(string: "http://www.json-generator.com/api/json/get/")
 public class SDNetworkManager: NSObject
 {
     
+    private var networkManagerQueue: NSOperationQueue? = nil
 //    var block = CompletionHandler?()
-    
     public class var sharedInstance :SDNetworkManager
     {
         struct Singleton
@@ -26,6 +26,10 @@ public class SDNetworkManager: NSObject
         return Singleton.instance
     }
     
+    override init() {
+        networkManagerQueue = NSOperationQueue()
+    }
+    
     public func testMethod()
     {
         print("2")
@@ -33,7 +37,8 @@ public class SDNetworkManager: NSObject
     
     public func performLogin(#email: String, password: String)
     {
-        
+        var opLogin = SDLoginOperation()
+        networkManagerQueue?.addOperation(opLogin)
     }
     
     public func fetchDashboardData(#completionHandler: CompletionHandler)
@@ -62,7 +67,7 @@ public class SDNetworkManager: NSObject
     public func fetchAllProductsData(#completionHandler: CompletionHandler)
     {
         var url = NSURL(string: "ccOficoHNe", relativeToURL: baseURL)
-        var session: Void = NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler: { (data, urlResponse, error) -> Void in
+        var session = NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler: { (data, urlResponse, error) -> Void in
             if let err = error
             {
                 println("Parsing Error")
@@ -81,6 +86,7 @@ public class SDNetworkManager: NSObject
                     completionHandler(data: json, isSuccessful: true)
                 })
             }
-        }).resume()
+        })
+        session.resume()
     }
 }

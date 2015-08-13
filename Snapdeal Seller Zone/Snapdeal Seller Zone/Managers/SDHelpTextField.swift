@@ -8,14 +8,33 @@
 
 import UIKit
 
-class SDHelpTextField: UITextField {
-
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
-    }
-    */
-
+@objc protocol SDHelpTextFieldDelegate
+{
+    optional func buttonTappedOn()
 }
+
+class SDHelpTextField: UITextField
+{
+    var helpDelegate: AnyObject? = nil
+    var helpView: Bool? {
+        didSet{
+            var btnHelp = UIButton.buttonWithType(.InfoLight) as! UIButton
+            btnHelp.tintColor = UIColor.blackColor()
+            btnHelp.tag = self.tag
+            btnHelp.addTarget(self, action: "handleTapOnHelpText:", forControlEvents: .TouchUpInside)
+            self.rightView = btnHelp
+            self.rightViewMode = .Always
+        }
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        helpView = true
+    }
+    
+    internal func handleTapOnHelpText(button: UIButton)
+    {
+        self.helpDelegate?.buttonTappedOn!()
+    }
+}
+

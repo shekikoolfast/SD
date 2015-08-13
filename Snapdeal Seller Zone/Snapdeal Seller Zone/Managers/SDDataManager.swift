@@ -7,7 +7,23 @@
 //
 
 import UIKit
+import SDNetworkManager
+import SDCoreDataManager
 
-class SDDataManager: NSObject {
-   
+
+class SDDataManager: NSObject
+{
+    class var sharedInstance :SDDataManager
+    {
+        struct Singleton
+        {
+            static let instance = SDDataManager()
+        }
+        return Singleton.instance
+    }
+    
+    func handleLogin(#email: String, password: String)
+    {
+        SDNetworkManager.sharedInstance.performLogin(email: email, password: password)
+    }
 }
