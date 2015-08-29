@@ -22,14 +22,13 @@ class SDRegisterTableViewController: UITableViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        var fields = [tfCompanyName, tfEmailID, tfMobileNo, tfPassword, tfPinCode, tfPrimaryCategory]
+        let fields = [tfCompanyName, tfEmailID, tfMobileNo, tfPassword, tfPinCode, tfPrimaryCategory]
         accessoryView = SDKeyboardAccessoryView(fields: fields, delegate: self)
         
         NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardDidShowNotification, object: self, queue: NSOperationQueue.mainQueue()) { (info) -> Void in
             
             let object = info.object as! [String: AnyObject]
-            let frame = (object[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
-            print(frame)
+            _ = (object[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
         }
     }
     
@@ -49,7 +48,7 @@ class SDRegisterTableViewController: UITableViewController
     }
     
     override func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        var footerView = UIView(frame: CGRectMake(0, 0, CGRectGetWidth(tableView.bounds), 1))
+        let footerView = UIView(frame: CGRectMake(0, 0, CGRectGetWidth(tableView.bounds), 1))
         footerView.backgroundColor = UIColor.clearColor()
         return footerView
     }
@@ -71,7 +70,7 @@ extension SDRegisterTableViewController: UITextFieldDelegate
         textField.inputAccessoryView = accessoryView
         if textField == tfPrimaryCategory
         {
-            var pickerView = UIPickerView(frame: CGRect(x: 0, y: 0, width: 320, height: 216))
+            let pickerView = UIPickerView(frame: CGRect(x: 0, y: 0, width: 320, height: 216))
             pickerView.dataSource = self
             pickerView.delegate = self
             textField.inputView = pickerView
@@ -108,23 +107,8 @@ extension SDRegisterTableViewController: UIPickerViewDataSource
 
 extension SDRegisterTableViewController: UIPickerViewDelegate
 {
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String!
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
     {
         return "Abhishek"
-    }
-}
-
-extension Array
-{
-    func find(includedElement: T -> Bool) -> Int?
-    {
-        for (idx, element) in enumerate(self)
-        {
-            if includedElement(element)
-            {
-                return idx
-            }
-        }
-        return nil
     }
 }

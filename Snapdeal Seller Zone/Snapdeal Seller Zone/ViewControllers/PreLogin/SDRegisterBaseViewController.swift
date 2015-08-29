@@ -20,27 +20,28 @@ class SDRegisterBaseViewController: UIViewController
     
     @IBAction func handleTapOnSegmentControl(sender: UISegmentedControl)
     {
-        var pageController = childViewControllers[0] as! SDRegisterPageViewController
+        let pageController = childViewControllers[0] as! SDRegisterPageViewController
         switch sender.selectedSegmentIndex
         {
         case 0:
-            var sellerVC = storyboard?.instantiateViewControllerWithIdentifier("SDSellerDetailsViewController") as! SDSellerDetailsViewController
+            let sellerVC = storyboard?.instantiateViewControllerWithIdentifier("SDSellerDetailsViewController") as! SDSellerDetailsViewController
             pageController.setViewControllers([sellerVC], direction: .Reverse, animated: true, completion: nil)
             
         case 1:
-            var businessVC = storyboard?.instantiateViewControllerWithIdentifier("SDBusinessDetailsTableViewController") as! SDBusinessDetailsTableViewController
-            if pageController.viewControllers[0] is SDSellerDetailsViewController
-            {
-                pageController.setViewControllers([businessVC], direction: .Forward, animated: true, completion: nil)
-            }
-            else
-            {
-                pageController.setViewControllers([businessVC], direction: .Reverse, animated: true, completion: nil)
-            }
+            _ = storyboard?.instantiateViewControllerWithIdentifier("SDBusinessDetailsTableViewController") as! SDBusinessDetailsTableViewController
+//            let controllers = pageController.viewControllers as! [UIViewController]
+//            if controllers[0] is SDSellerDetailsViewController
+//            {
+//                pageController.setViewControllers([businessVC], direction: .Forward, animated: true, completion: nil)
+//            }
+//            else
+//            {
+//                pageController.setViewControllers([businessVC], direction: .Reverse, animated: true, completion: nil)
+//            }
             
             
         case 2:
-            var contractVC = storyboard?.instantiateViewControllerWithIdentifier("SDContractViewController") as! SDContractViewController
+            let contractVC = storyboard?.instantiateViewControllerWithIdentifier("SDContractViewController") as! SDContractViewController
             pageController.setViewControllers([contractVC], direction: .Forward, animated: true, completion: nil)
             
         default:

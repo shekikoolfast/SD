@@ -10,5 +10,9 @@ import UIKit
 
 class SDParseDataOperation: NSOperation
 {
-   
+    var strTemp:String? = nil
+    override func main() {
+        _ = self.dependencies[0] as! SDFetchDataOperation
+        
+    }
 }

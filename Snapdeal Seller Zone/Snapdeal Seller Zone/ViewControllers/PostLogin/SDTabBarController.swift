@@ -32,7 +32,7 @@ extension SDTabBarController: UITabBarControllerDelegate
     
     func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
         let navController = viewController as! UINavigationController
-        var rootController = navController.viewControllers[0] as! UIViewController
+        let rootController = navController.viewControllers[0] as UIViewController
         if rootController is SDMoreTableViewController
         {
             if isNotificationArrived

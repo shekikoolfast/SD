@@ -27,7 +27,7 @@ class SDLoginViewController: UIViewController, UITextFieldDelegate
         // Do any additional setup after loading the view.
         navigationController?.navigationBarHidden = true
         
-        var btnForgotPassword = UIButton(frame: CGRectMake(0, 0, 50, 30))
+        let btnForgotPassword = UIButton(frame: CGRectMake(0, 0, 50, 30))
         btnForgotPassword.setTitle("Forgot?", forState: .Normal)
         btnForgotPassword .setTitleColor(UIColor.blackColor(), forState: .Normal)
         btnForgotPassword.titleLabel?.font = UIFont.systemFontOfSize(10)
@@ -51,7 +51,7 @@ class SDLoginViewController: UIViewController, UITextFieldDelegate
     
     func handleForgotPassword(sender: UIButton)
     {
-        var alertController = UIAlertController(title: "Forgot Password?", message: "Please enter your Email ID to help you recover your password.", preferredStyle: .Alert)
+        let alertController = UIAlertController(title: "Forgot Password?", message: "Please enter your Email ID to help you recover your password.", preferredStyle: .Alert)
         alertController.addTextFieldWithConfigurationHandler { (tfEmail) -> Void in
             
             self.tfEmailID = tfEmail
@@ -60,12 +60,12 @@ class SDLoginViewController: UIViewController, UITextFieldDelegate
             tfEmail.placeholder = "Enter your Email ID here"
             tfEmail.delegate = self
         }
-        var okAction = UIAlertAction(title: "OK", style: .Default) { (action) -> Void in
+        let okAction = UIAlertAction(title: "OK", style: .Default) { (action) -> Void in
             alertController.dismissViewControllerAnimated(true, completion: nil)
         }
         okAction.enabled = false
         okAction1 = okAction
-        var cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) -> Void in
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) -> Void in
             alertController.dismissViewControllerAnimated(true, completion: nil)
         }
         alertController.addAction(okAction)
@@ -83,30 +83,30 @@ class SDLoginViewController: UIViewController, UITextFieldDelegate
     {
         SDDataManager.sharedInstance.handleLogin(email: "abhishek", password: "kumar")
         
-        var storybord = UIStoryboard(name: "PostLogin", bundle: NSBundle.mainBundle())
-        var tabbarController = storybord.instantiateInitialViewController() as! SDTabBarController
+        let storybord = UIStoryboard(name: "PostLogin", bundle: NSBundle.mainBundle())
+        let tabbarController = storybord.instantiateInitialViewController() as! SDTabBarController
         navigationController?.setViewControllers([tabbarController], animated: true)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var controller = segue.destinationViewController as! UIViewController
+        _ = segue.destinationViewController
     }
 
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent)
-    {
-        view.endEditing(true)
-    }
+//    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?)
+//    {
+//        view.endEditing(true)
+//    }
 }
 
 //MARK:
 //MARK: UITextFieldDelegate Methods
-extension SDLoginViewController: UITextFieldDelegate
+extension SDLoginViewController
 {
     func textFieldShouldReturn(textField: UITextField) -> Bool
     {
         if textField == self.tfEmailID
         {
-            if let isTextAvailable = self.tfEmailID?.hasText()
+            if let _ = self.tfEmailID?.hasText()
             {
                 return true
             }
@@ -119,13 +119,13 @@ extension SDLoginViewController: UITextFieldDelegate
     {
         if textField == self.tfEmailID
         {
-            var isEmailValid = isValidEmail(testStr: textField.text)
+            let isEmailValid = isValidEmail(testStr: textField.text!)
             okAction1?.enabled = isEmailValid
         }
         return true
     }
     
-    func isValidEmail(#testStr:String) -> Bool
+    func isValidEmail(testStr testStr:String) -> Bool
     {
         // println("validate calendar: \(testStr)")
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"

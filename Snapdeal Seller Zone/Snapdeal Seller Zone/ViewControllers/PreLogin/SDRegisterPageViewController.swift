@@ -16,10 +16,9 @@ class SDRegisterPageViewController: UIPageViewController {
         // Do any additional setup after loading the view.
         dataSource = self
         delegate = self
-        var sellerVC = storyboard?.instantiateViewControllerWithIdentifier("SDSellerDetailsViewController") as! SDSellerDetailsViewController
-        var businessVC = storyboard?.instantiateViewControllerWithIdentifier("SDBusinessDetailsTableViewController") as! SDBusinessDetailsTableViewController
-        var contractVC = storyboard?.instantiateViewControllerWithIdentifier("SDContractViewController") as! SDContractViewController
-        var arr: [AnyObject] = [sellerVC, businessVC, contractVC]
+        let sellerVC = storyboard?.instantiateViewControllerWithIdentifier("SDSellerDetailsViewController") as! SDSellerDetailsViewController
+        _ = storyboard?.instantiateViewControllerWithIdentifier("SDBusinessDetailsTableViewController") as! SDBusinessDetailsTableViewController
+        _ = storyboard?.instantiateViewControllerWithIdentifier("SDContractViewController") as! SDContractViewController
         setViewControllers([sellerVC], direction: .Forward, animated: true, completion: nil)
     }
 
@@ -39,12 +38,12 @@ extension SDRegisterPageViewController: UIPageViewControllerDataSource
         }
         else if viewController is SDBusinessDetailsTableViewController
         {
-            var sellerVC = storyboard?.instantiateViewControllerWithIdentifier("SDSellerDetailsViewController") as! SDSellerDetailsViewController
+            let sellerVC = storyboard?.instantiateViewControllerWithIdentifier("SDSellerDetailsViewController") as! SDSellerDetailsViewController
             return sellerVC
         }
         else if viewController is SDContractViewController
         {
-            var sellerVC = storyboard?.instantiateViewControllerWithIdentifier("SDBusinessDetailsTableViewController") as! SDBusinessDetailsTableViewController
+            let sellerVC = storyboard?.instantiateViewControllerWithIdentifier("SDBusinessDetailsTableViewController") as! SDBusinessDetailsTableViewController
             return sellerVC
         }
         return nil
@@ -57,12 +56,12 @@ extension SDRegisterPageViewController: UIPageViewControllerDataSource
         }
         else if viewController is SDBusinessDetailsTableViewController
         {
-            var sellerVC = storyboard?.instantiateViewControllerWithIdentifier("SDContractViewController") as! SDContractViewController
+            let sellerVC = storyboard?.instantiateViewControllerWithIdentifier("SDContractViewController") as! SDContractViewController
             return sellerVC
         }
         else if viewController is SDSellerDetailsViewController
         {
-            var sellerVC = storyboard?.instantiateViewControllerWithIdentifier("SDBusinessDetailsTableViewController") as! SDBusinessDetailsTableViewController
+            let sellerVC = storyboard?.instantiateViewControllerWithIdentifier("SDBusinessDetailsTableViewController") as! SDBusinessDetailsTableViewController
             return sellerVC
         }
         return nil

@@ -14,19 +14,23 @@ class SDFetchDataOperation: NSOperation
 {
     let url: NSURL?
 
+    var vdata: String? = nil
     init(url: NSURL)
     {
         self.url = url
+        
 //        self.qualityOfService = .UserInitiated
         super.init()
     }
     
-    override func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<Void>) {
-        
-    }
     
-    override func main() {
-        
+    override func main()
+    {
+        print("Start getting the data")
+        NSURLSession.sharedSession().dataTaskWithURL(self.url!, completionHandler: { (data, urlResponse, error) -> Void in
+            print(urlResponse)
+            self.vdata = error!.localizedDescription
+        }).resume()
     }
     
     

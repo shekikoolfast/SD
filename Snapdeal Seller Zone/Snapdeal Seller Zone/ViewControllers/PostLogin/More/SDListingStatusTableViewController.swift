@@ -12,11 +12,11 @@ class SDListingStatusTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        var btnSearch = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: "handleTapOnSearch")
+        let btnSearch = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: "handleTapOnSearch")
         self.navigationItem.rightBarButtonItem = btnSearch
         
-        var refreshCtrl = UIRefreshControl()
-        var title = NSAttributedString(string: "Refreshing Product Listing status")
+        let refreshCtrl = UIRefreshControl()
+        let title = NSAttributedString(string: "Refreshing Product Listing status")
         refreshCtrl.attributedTitle = title
         refreshCtrl.addTarget(self, action: "handlePullToRefresh:", forControlEvents: .ValueChanged)
         refreshControl = refreshCtrl
@@ -46,7 +46,7 @@ class SDListingStatusTableViewController: UITableViewController {
     }
 }
 
-extension SDListingStatusTableViewController: UITableViewDataSource
+extension SDListingStatusTableViewController
 {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
@@ -55,12 +55,12 @@ extension SDListingStatusTableViewController: UITableViewDataSource
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("listingCell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("listingCell", forIndexPath: indexPath)
         return cell
     }
 }
 
-extension SDListingStatusTableViewController: UITableViewDelegate
+extension SDListingStatusTableViewController
 {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)

@@ -12,8 +12,8 @@ class SDProductDetailsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        var refreshCtrl = UIRefreshControl()
-        var title = NSAttributedString(string: "Refreshing Product Details")
+        let refreshCtrl = UIRefreshControl()
+        let title = NSAttributedString(string: "Refreshing Product Details")
         refreshCtrl.attributedTitle = title
         refreshCtrl.addTarget(self, action: "handlePullToRefresh:", forControlEvents: .ValueChanged)
         refreshControl = refreshCtrl
@@ -31,7 +31,7 @@ class SDProductDetailsTableViewController: UITableViewController {
     }
 }
 
-extension SDProductDetailsTableViewController: UITableViewDelegate
+extension SDProductDetailsTableViewController
 {
     
 }

@@ -15,26 +15,26 @@ class SDSectionHeader: UICollectionViewFlowLayout
         return true
     }
     
-    override func layoutAttributesForDecorationViewOfKind(elementKind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes!
+    override func layoutAttributesForDecorationViewOfKind(elementKind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes?
     {
-        var layoutAttributes = UICollectionViewLayoutAttributes(forDecorationViewOfKind: elementKind, withIndexPath: indexPath)
+        let layoutAttributes = UICollectionViewLayoutAttributes(forDecorationViewOfKind: elementKind, withIndexPath: indexPath)
         layoutAttributes.frame = CGRect(x: 0, y: 0, width: 320, height: 50)
         layoutAttributes.zIndex = 2
         return layoutAttributes
     }
     
-    override func layoutAttributesForElementsInRect(rect: CGRect) -> [AnyObject]?
+    override func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]?
     {
         //super.layoutAttributesForElementsInRect(rect) as? [UICollectionViewLayoutAttributes]
         var array = [UICollectionViewLayoutAttributes]()
-        var indexPath = NSIndexPath(forItem: 0, inSection: 0)
-        array.append(self.layoutAttributesForDecorationViewOfKind("FloorPlan", atIndexPath: indexPath))
+        let indexPath = NSIndexPath(forItem: 0, inSection: 0)
+        array.append(self.layoutAttributesForDecorationViewOfKind("FloorPlan", atIndexPath: indexPath)!)
         
-        for (index, layoutAttributes) in enumerate(array)
+        for (index, _) in array.enumerate()
         {
-            var indexPath = NSIndexPath(forItem: index, inSection: 0)
-            var attr = layoutAttributesForItemAtIndexPath(indexPath)
-            array.append(attr)
+            let indexPath = NSIndexPath(forItem: index, inSection: 0)
+            let attr = layoutAttributesForItemAtIndexPath(indexPath)
+            array.append(attr!)
         }
         return array
     }

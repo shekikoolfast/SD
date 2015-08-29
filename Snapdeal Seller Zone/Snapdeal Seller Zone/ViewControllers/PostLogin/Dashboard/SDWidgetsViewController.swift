@@ -15,12 +15,12 @@ class SDWidgetsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        var refreshControl = UIRefreshControl()
+        let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: "handlePullToRefresh:", forControlEvents: .ValueChanged)
         collectionView.addSubview(refreshControl)
         
-        var layout = collectionView.collectionViewLayout
-        println(layout)
+        let layout = collectionView.collectionViewLayout
+        print(layout)
         layout.registerClass(SDScrollDecorationView.self, forDecorationViewOfKind: "FloorPlan")
         createBarButtons()
         
@@ -30,21 +30,21 @@ class SDWidgetsViewController: UIViewController {
 
     private func createBarButtons()
     {
-        var btnNotification = UIBarButtonItem(barButtonSystemItem: .Play, target: self, action: "handleTapOnNotification")
-        var btnNotif = UIBarButtonItem(barButtonSystemItem: .Pause, target: self, action: "handleTapOnNotification")
+        let btnNotification = UIBarButtonItem(barButtonSystemItem: .Play, target: self, action: "handleTapOnNotification")
+        let btnNotif = UIBarButtonItem(barButtonSystemItem: .Pause, target: self, action: "handleTapOnNotification")
         self.navigationItem.rightBarButtonItems = [btnNotification, btnNotif]
         
     }
     
     func handleTapOnNotification()
     {
-        var tabBarController = parentViewController?.parentViewController as! SDTabBarController
+        let tabBarController = parentViewController?.parentViewController as! SDTabBarController
         tabBarController.selectedIndex = 4
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        var lbl = SDAppearanceManager.showNoInternet()
+        _ = SDAppearanceManager.showNoInternet()
 //        self.view.addSubview(lbl!)
 //        self.view.bringSubviewToFront(lbl!)
     }
@@ -77,7 +77,7 @@ extension SDWidgetsViewController: UICollectionViewDataSource
     {
         if kind == UICollectionElementKindSectionHeader
         {
-            let headerCell = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "HeaderView", forIndexPath: indexPath) as! UICollectionReusableView
+            let headerCell = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "HeaderView", forIndexPath: indexPath) as UICollectionReusableView
             headerCell.backgroundColor = UIColor.grayColor()
             return headerCell
         }
@@ -91,7 +91,7 @@ extension SDWidgetsViewController: UICollectionViewDataSource
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
     {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("WidgetCell", forIndexPath: indexPath) as! UICollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("WidgetCell", forIndexPath: indexPath) as UICollectionViewCell
         cell.backgroundColor = UIColor.whiteColor()
 
         return cell

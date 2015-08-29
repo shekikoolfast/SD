@@ -10,7 +10,7 @@ import UIKit
 
 @objc protocol SDHelpTextFieldDelegate
 {
-    optional func buttonTappedOn()
+    optional func buttonTappedOn(button: UIButton)
 }
 
 class SDHelpTextField: UITextField
@@ -18,7 +18,7 @@ class SDHelpTextField: UITextField
     var helpDelegate: AnyObject? = nil
     var helpView: Bool? {
         didSet{
-            var btnHelp = UIButton.buttonWithType(.InfoLight) as! UIButton
+            let btnHelp = UIButton(type: .Custom)
             btnHelp.tintColor = UIColor.blackColor()
             btnHelp.tag = self.tag
             btnHelp.addTarget(self, action: "handleTapOnHelpText:", forControlEvents: .TouchUpInside)
@@ -34,7 +34,7 @@ class SDHelpTextField: UITextField
     
     internal func handleTapOnHelpText(button: UIButton)
     {
-        self.helpDelegate?.buttonTappedOn!()
+        self.helpDelegate?.buttonTappedOn!(button)
     }
 }
 

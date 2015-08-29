@@ -22,7 +22,7 @@ class SDDataManager: NSObject
         return Singleton.instance
     }
     
-    func handleLogin(#email: String, password: String)
+    func handleLogin(email email: String, password: String)
     {
         SDNetworkManager.sharedInstance.performLogin(email: email, password: password)
     }

@@ -32,10 +32,10 @@ class SDKeyboardAccessoryView: UIToolbar {
 
     private func createButtons()
     {
-        var btnPrev = UIBarButtonItem(barButtonSystemItem: .Rewind, target: self, action: "handleGotoPreviousResponder")
-        var btnNext = UIBarButtonItem(barButtonSystemItem: .FastForward, target: self, action: "handleGotoNextResponder")
-        var spacerView = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: self, action: nil)
-        var btnDone = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "handleDone")
+        let btnPrev = UIBarButtonItem(barButtonSystemItem: .Rewind, target: self, action: "handleGotoPreviousResponder")
+        let btnNext = UIBarButtonItem(barButtonSystemItem: .FastForward, target: self, action: "handleGotoNextResponder")
+        let spacerView = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: self, action: nil)
+        let btnDone = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "handleDone")
         self.items = [btnPrev, btnNext, spacerView,btnDone]
     }
     

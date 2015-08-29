@@ -24,7 +24,7 @@ class SDMoreTableViewController: UITableViewController {
     }
 }
 
-extension SDMoreTableViewController: UITableViewDataSource
+extension SDMoreTableViewController
 {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrDataSource.count
@@ -32,13 +32,13 @@ extension SDMoreTableViewController: UITableViewDataSource
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) 
         cell.textLabel?.text = arrDataSource[indexPath.row]
         return cell
     }
 }
 
-extension SDMoreTableViewController: UITableViewDelegate
+extension SDMoreTableViewController
 {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
@@ -59,5 +59,15 @@ extension SDMoreTableViewController: UITableViewDelegate
         }
         performSegueWithIdentifier("segueNotification", sender: nil)
     }
+    
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool
+    {
+        return true
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
+    
 }
 

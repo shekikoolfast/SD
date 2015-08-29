@@ -32,16 +32,21 @@ public class SDNetworkManager: NSObject
     
     public func testMethod()
     {
-        print("2")
+        
     }
     
-    public func performLogin(#email: String, password: String)
+    public func performLogin(email email: String, password: String)
     {
-        var opLogin = SDLoginOperation()
+        let opLogin = SDLoginOperation()
         networkManagerQueue?.addOperation(opLogin)
+        opLogin.completionBlock = { () -> Void in
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                
+            })
+        }
     }
     
-    public func fetchDashboardData(#completionHandler: CompletionHandler)
+    public func fetchDashboardData(completionHandler completionHandler: CompletionHandler)
     {
         /*
          * Get the application configuration from the specified URL.
@@ -54,39 +59,39 @@ public class SDNetworkManager: NSObject
         })
     }
     
-    func fetchApplicationConfiguration(#completionHandler: CompletionHandler)
+    func fetchApplicationConfiguration(completionHandler completionHandler: CompletionHandler)
     {
         
     }
     
-    func fetchAvailableWidgetConfiguration(#completionHandler: CompletionHandler)
+    func fetchAvailableWidgetConfiguration(completionHandler completionHandler: CompletionHandler)
     {
         
     }
     
-    public func fetchAllProductsData(#completionHandler: CompletionHandler)
+    public func fetchAllProductsData(completionHandler completionHandler: CompletionHandler)
     {
-        var url = NSURL(string: "ccOficoHNe", relativeToURL: baseURL)
-        var session = NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler: { (data, urlResponse, error) -> Void in
-            if let err = error
-            {
-                println("Parsing Error")
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    completionHandler(data: nil, isSuccessful: false)
-                })
-            }
-            else
-            {
-                var error = NSErrorPointer()
-                var json = NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments, error: error) as! [[String: AnyObject]]
-                println( "toString(myvar0.dynamicType) -> \(json.dynamicType)")
-                println(error)
-                println(json)
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    completionHandler(data: json, isSuccessful: true)
-                })
-            }
-        })
-        session.resume()
+        _ = NSURL(string: "ccOficoHNe", relativeToURL: baseURL)
+//        let session = NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler: { (data, urlResponse, error) -> Void in
+//            if let _ = error
+//            {
+//                print("Parsing Error")
+//                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+//                    completionHandler(data: nil, isSuccessful: false)
+//                })
+//            }
+//            else
+//            {
+//                let error = NSErrorPointer()
+//                let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as! [[String: AnyObject]]
+//                print( "toString(myvar0.dynamicType) -> \(json.dynamicType)")
+//                print(error)
+//                print(json)
+//                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+//                    completionHandler(data: json, isSuccessful: true)
+//                })
+//            }
+//        })
+//        session!.resume()
     }
 }

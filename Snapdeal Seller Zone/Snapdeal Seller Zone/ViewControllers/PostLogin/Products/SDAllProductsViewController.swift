@@ -37,7 +37,7 @@ class SDAllProductsViewController: UICollectionViewController
 
 }
 
-extension SDAllProductsViewController: UICollectionViewDataSource
+extension SDAllProductsViewController
 {
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataSouceAllProducts.count
@@ -51,7 +51,7 @@ extension SDAllProductsViewController: UICollectionViewDataSource
     }
 }
 
-extension SDAllProductsViewController: UICollectionViewDelegate
+extension SDAllProductsViewController
 {
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         performSegueWithIdentifier("segueProductDetail", sender: nil)

@@ -29,7 +29,7 @@ class SDProductsCollectionViewCell: UICollectionViewCell
     @IBOutlet weak var lblSKU: UILabel!
     @IBOutlet weak var lblAttributes: UILabel!
     
-    func configureProductsData(#dictProduct: [String: AnyObject])
+    func configureProductsData(dictProduct dictProduct: [String: AnyObject])
     {
         statusHeight.constant = 0
         lblStatus.text = ""//dictProduct[Status] as? String

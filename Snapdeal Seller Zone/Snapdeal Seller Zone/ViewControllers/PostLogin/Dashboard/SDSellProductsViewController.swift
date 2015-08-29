@@ -14,7 +14,7 @@ class SDSellProductsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        var header = collectionView.collectionViewLayout
+        let header = collectionView.collectionViewLayout
         header.registerClass(SDScrollDecorationView.self, forDecorationViewOfKind: "FloorPlan")
         
         // Do any additional setup after loading the view.
@@ -55,7 +55,7 @@ extension SDSellProductsViewController: UICollectionViewDataSource
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
     {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("SellCell", forIndexPath: indexPath) as! UICollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("SellCell", forIndexPath: indexPath) as UICollectionViewCell
         cell.backgroundColor = UIColor.whiteColor()
         
         return cell

@@ -13,7 +13,7 @@ class SDAppearanceManager: NSObject
     class func setupAppearance()
     {
 //        UILabel.appearance().font = UIFont.systemFontOfSize(15)
-        var backButtonImage = UIImage(named: "")
+        let backButtonImage = UIImage(named: "")
         UIBarButtonItem.appearance().setBackButtonBackgroundImage(backButtonImage, forState: .Normal, barMetrics: .Default)
         
         
@@ -30,12 +30,12 @@ class SDAppearanceManager: NSObject
     
     class func showNoInternet() -> UILabel?
     {
-        var lblNoInternet = UILabel(frame: UIScreen.mainScreen().bounds)
+        let lblNoInternet = UILabel(frame: UIScreen.mainScreen().bounds)
         lblNoInternet.backgroundColor = UIColor.groupTableViewBackgroundColor()
         lblNoInternet.numberOfLines = 0
-        var attrs = [NSFontAttributeName : UIFont.systemFontOfSize(30.0), NSTextEffectAttributeName: NSTextEffectLetterpressStyle]
+        let attrs = [NSFontAttributeName : UIFont.systemFontOfSize(30.0), NSTextEffectAttributeName: NSTextEffectLetterpressStyle]
         lblNoInternet.textAlignment = .Center
-        var string = NSMutableAttributedString(string: "Cannot Connect to Snapdeal network.", attributes: attrs)
+        let string = NSMutableAttributedString(string: "Cannot Connect to Snapdeal network.", attributes: attrs)
         lblNoInternet.attributedText = string
         return lblNoInternet
 //        string.attribu
