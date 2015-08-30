@@ -14,26 +14,56 @@ class SDLoginViewController: UIViewController, UITextFieldDelegate
     //MARK: IBOutlets Properties
     
     @IBOutlet weak var tfUsername: UITextField!
-    @IBOutlet weak var tfPassword: UITextField!
+    @IBOutlet weak var tfPassword: UITextField! {
+        didSet {
+            tfPassword.rightView = configurePasswordRightView(tfPassword)
+            tfPassword.rightViewMode = .Always
+        }
+    }
     @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var btnRegister: UIButton!
     
     weak var tfEmailID: UITextField?
     weak var okAction1: UIAlertAction?
     
+    var isShowingPasswordText = false {
+        didSet {
+            tfPassword.secureTextEntry = !isShowingPasswordText
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         navigationController?.navigationBarHidden = true
+
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "textInPasswordDidChange:", name: UITextFieldTextDidChangeNotification, object: tfPassword)
+    }
+    
+    func configurePasswordRightView(tfPasswd: UITextField) -> UIButton {
+        let btnRightView = UIButton(frame: CGRectMake(0, 0, 50, 30))
+        btnRightView .setTitleColor(UIColor.blackColor(), forState: .Normal)
+        btnRightView.titleLabel?.font = UIFont.systemFontOfSize(10)
         
-        let btnForgotPassword = UIButton(frame: CGRectMake(0, 0, 50, 30))
-        btnForgotPassword.setTitle("Forgot?", forState: .Normal)
-        btnForgotPassword .setTitleColor(UIColor.blackColor(), forState: .Normal)
-        btnForgotPassword.titleLabel?.font = UIFont.systemFontOfSize(10)
-        btnForgotPassword.addTarget(self, action: "handleForgotPassword:", forControlEvents: .TouchUpInside)
-        tfPassword.rightViewMode = .Always
-        tfPassword.rightView = btnForgotPassword
+        if tfPasswd.hasText() {
+            btnRightView.setTitle("Display", forState: .Normal)
+            btnRightView.addTarget(self, action: "handleShowPassword:", forControlEvents: .TouchUpInside)
+        } else {
+            btnRightView.setTitle("Forgot?", forState: .Normal)
+            btnRightView.addTarget(self, action: "handleForgotPassword:", forControlEvents: .TouchUpInside)
+        }
+        return btnRightView
+    }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UITextFieldTextDidChangeNotification, object: tfPassword)
+    }
+    
+    func textInPasswordDidChange(notification: NSNotification) {
+        let textField = notification.object as! UITextField
+        textField.rightView = configurePasswordRightView(textField)
+        textField.rightViewMode = .Always
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -48,6 +78,10 @@ class SDLoginViewController: UIViewController, UITextFieldDelegate
     
     //MARK:
     //MARK: IBAction Methods
+    
+    func handleShowPassword(sender: UIButton) {
+        isShowingPasswordText = !isShowingPasswordText
+    }
     
     func handleForgotPassword(sender: UIButton)
     {
@@ -92,10 +126,10 @@ class SDLoginViewController: UIViewController, UITextFieldDelegate
         _ = segue.destinationViewController
     }
 
-//    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?)
-//    {
-//        view.endEditing(true)
-//    }
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?)
+    {
+        view.endEditing(true)
+    }
 }
 
 //MARK:

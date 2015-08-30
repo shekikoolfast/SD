@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A0F695C1B6BE6E6008D350E /* SDTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0F695B1B6BE6E6008D350E /* SDTabBarController.swift */; };
-		4A0F695F1B6BEA0A008D350E /* SDWidgetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0F695E1B6BEA0A008D350E /* SDWidgetsViewController.swift */; };
 		4A3551C91B75280600F1B0DE /* SDRegisterBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3551C81B75280600F1B0DE /* SDRegisterBaseViewController.swift */; };
 		4A3551CB1B752ABD00F1B0DE /* SDSellerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3551CA1B752ABD00F1B0DE /* SDSellerDetailsViewController.swift */; };
 		4A3551CF1B752D7500F1B0DE /* SDKeyboardAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3551CE1B752D7500F1B0DE /* SDKeyboardAccessoryView.swift */; };
@@ -30,7 +28,6 @@
 		4A54B24F1B68C630006CBA9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A54B24E1B68C630006CBA9A /* Images.xcassets */; };
 		4A54B2521B68C630006CBA9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A54B2501B68C630006CBA9A /* LaunchScreen.xib */; };
 		4A54B25E1B68C630006CBA9A /* Snapdeal_Seller_ZoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54B25D1B68C630006CBA9A /* Snapdeal_Seller_ZoneTests.swift */; };
-		4A5FC5AF1B760381009278D5 /* SDFillProductInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FC5AE1B760381009278D5 /* SDFillProductInfoTableViewController.swift */; };
 		4A6BD59E1B7A384F002D3D7A /* SDBusinessDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD59D1B7A384F002D3D7A /* SDBusinessDetailsTableViewController.swift */; };
 		4A6BD5A01B7A38BC002D3D7A /* SDContractViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD59F1B7A38BC002D3D7A /* SDContractViewController.swift */; };
 		4A6BD5A21B7A38E5002D3D7A /* SDRegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5A11B7A38E5002D3D7A /* SDRegisterPageViewController.swift */; };
@@ -50,25 +47,18 @@
 		4A6BD5C41B7BAABD002D3D7A /* SDParseDataOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5C21B7BAABD002D3D7A /* SDParseDataOperation.swift */; };
 		4A6BD5C61B7BAED6002D3D7A /* SDLoginOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5C51B7BAED6002D3D7A /* SDLoginOperation.swift */; };
 		4A6BD5C71B7BAED6002D3D7A /* SDLoginOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5C51B7BAED6002D3D7A /* SDLoginOperation.swift */; };
-		4A86D9AA1B713BC5004907CD /* SDProductDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86D9A91B713BC5004907CD /* SDProductDetailsTableViewController.swift */; };
-		4A9BECF61B6D44EB007325B6 /* SDStickyHeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BECF51B6D44EB007325B6 /* SDStickyHeaderLayout.swift */; };
-		4A9BECF81B6D4527007325B6 /* SDSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BECF71B6D4527007325B6 /* SDSectionHeader.swift */; };
-		4A9BECFA1B6D6C83007325B6 /* WdigetHeaderReuseableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BECF91B6D6C83007325B6 /* WdigetHeaderReuseableView.swift */; };
-		4A9BECFC1B6DF7BD007325B6 /* SDScrollDecorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BECFB1B6DF7BD007325B6 /* SDScrollDecorationView.swift */; };
-		4A9BECFE1B6DF81F007325B6 /* SDSellProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BECFD1B6DF81F007325B6 /* SDSellProductsViewController.swift */; };
-		4A9BED011B6E2B4B007325B6 /* SDMoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BED001B6E2B4B007325B6 /* SDMoreTableViewController.swift */; };
-		4A9BED031B6E2DD5007325B6 /* SDNotificationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BED021B6E2DD5007325B6 /* SDNotificationsTableViewController.swift */; };
-		4A9BED051B6E9308007325B6 /* SDListingStatusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BED041B6E9308007325B6 /* SDListingStatusTableViewController.swift */; };
-		4A9BED081B6EA16C007325B6 /* SDProductsBaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BED071B6EA16C007325B6 /* SDProductsBaseCollectionViewController.swift */; };
-		4A9BED0A1B6EA1CA007325B6 /* SDAllProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BED091B6EA1CA007325B6 /* SDAllProductsViewController.swift */; };
-		4A9BED0C1B6EA1DD007325B6 /* SDStockoutProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BED0B1B6EA1DD007325B6 /* SDStockoutProductsViewController.swift */; };
-		4A9BED0E1B6EA1F4007325B6 /* SDFavoriteProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BED0D1B6EA1F4007325B6 /* SDFavoriteProductsViewController.swift */; };
-		4A9BED101B6EA211007325B6 /* SDRecentlyViewedProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BED0F1B6EA211007325B6 /* SDRecentlyViewedProductsViewController.swift */; };
-		4A9BED121B6F2F97007325B6 /* SDProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BED111B6F2F97007325B6 /* SDProductsViewController.swift */; };
-		4A9BED141B6F31CF007325B6 /* SDProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BED131B6F31CF007325B6 /* SDProductsCollectionViewCell.swift */; };
 		4AAF9AA51B6A956B0045472F /* SDRegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF9AA41B6A956B0045472F /* SDRegisterTableViewController.swift */; };
-		4AAF9AAA1B6AAD010045472F /* PostLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AAF9AA91B6AAD010045472F /* PostLogin.storyboard */; };
 		4AAF9AAB1B6B6D9D0045472F /* SDCoreDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A503B6C1B6A739A0072454E /* SDCoreDataManager.h */; };
+		4AC50BB81B9321CE0086059B /* PostLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AC50BB51B9321CE0086059B /* PostLogin.storyboard */; settings = {ASSET_TAGS = (); }; };
+		4AC50BB91B9321CE0086059B /* SDTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC50BB71B9321CE0086059B /* SDTabBarController.swift */; settings = {ASSET_TAGS = (); }; };
+		4AC50BBD1B9322E40086059B /* SDHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AC50BBC1B9322E40086059B /* SDHome.storyboard */; settings = {ASSET_TAGS = (); }; };
+		4AC50BC31B93233E0086059B /* SDOrders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AC50BC21B93233E0086059B /* SDOrders.storyboard */; settings = {ASSET_TAGS = (); }; };
+		4AC50BC51B9323440086059B /* SDCatalogs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AC50BC41B9323440086059B /* SDCatalogs.storyboard */; settings = {ASSET_TAGS = (); }; };
+		4AC50BC71B9323620086059B /* SDPayments.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AC50BC61B9323620086059B /* SDPayments.storyboard */; settings = {ASSET_TAGS = (); }; };
+		4AC50BC91B93236B0086059B /* SDReturns.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AC50BC81B93236B0086059B /* SDReturns.storyboard */; settings = {ASSET_TAGS = (); }; };
+		4AC50BCB1B9325EB0086059B /* SDHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC50BCA1B9325EB0086059B /* SDHomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4AC50BCD1B932CED0086059B /* StoryboardSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC50BCC1B932CED0086059B /* StoryboardSelector.swift */; settings = {ASSET_TAGS = (); }; };
+		4AC50BCF1B933E7C0086059B /* SDOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC50BCE1B933E7C0086059B /* SDOrdersViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,8 +129,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4A0F695B1B6BE6E6008D350E /* SDTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDTabBarController.swift; sourceTree = "<group>"; };
-		4A0F695E1B6BEA0A008D350E /* SDWidgetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDWidgetsViewController.swift; sourceTree = "<group>"; };
 		4A3551C81B75280600F1B0DE /* SDRegisterBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDRegisterBaseViewController.swift; sourceTree = "<group>"; };
 		4A3551CA1B752ABD00F1B0DE /* SDSellerDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDSellerDetailsViewController.swift; sourceTree = "<group>"; };
 		4A3551CE1B752D7500F1B0DE /* SDKeyboardAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDKeyboardAccessoryView.swift; sourceTree = "<group>"; };
@@ -169,7 +157,6 @@
 		4A54B2571B68C630006CBA9A /* Snapdeal Seller ZoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Snapdeal Seller ZoneTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A54B25C1B68C630006CBA9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A54B25D1B68C630006CBA9A /* Snapdeal_Seller_ZoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snapdeal_Seller_ZoneTests.swift; sourceTree = "<group>"; };
-		4A5FC5AE1B760381009278D5 /* SDFillProductInfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDFillProductInfoTableViewController.swift; sourceTree = "<group>"; };
 		4A6BD59D1B7A384F002D3D7A /* SDBusinessDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDBusinessDetailsTableViewController.swift; sourceTree = "<group>"; };
 		4A6BD59F1B7A38BC002D3D7A /* SDContractViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDContractViewController.swift; sourceTree = "<group>"; };
 		4A6BD5A11B7A38E5002D3D7A /* SDRegisterPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDRegisterPageViewController.swift; sourceTree = "<group>"; };
@@ -180,24 +167,17 @@
 		4A6BD5BF1B7BAAAE002D3D7A /* SDFetchDataOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDFetchDataOperation.swift; sourceTree = "<group>"; };
 		4A6BD5C21B7BAABD002D3D7A /* SDParseDataOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDParseDataOperation.swift; sourceTree = "<group>"; };
 		4A6BD5C51B7BAED6002D3D7A /* SDLoginOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDLoginOperation.swift; sourceTree = "<group>"; };
-		4A86D9A91B713BC5004907CD /* SDProductDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDProductDetailsTableViewController.swift; sourceTree = "<group>"; };
-		4A9BECF51B6D44EB007325B6 /* SDStickyHeaderLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDStickyHeaderLayout.swift; sourceTree = "<group>"; };
-		4A9BECF71B6D4527007325B6 /* SDSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDSectionHeader.swift; sourceTree = "<group>"; };
-		4A9BECF91B6D6C83007325B6 /* WdigetHeaderReuseableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WdigetHeaderReuseableView.swift; sourceTree = "<group>"; };
-		4A9BECFB1B6DF7BD007325B6 /* SDScrollDecorationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDScrollDecorationView.swift; sourceTree = "<group>"; };
-		4A9BECFD1B6DF81F007325B6 /* SDSellProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDSellProductsViewController.swift; sourceTree = "<group>"; };
-		4A9BED001B6E2B4B007325B6 /* SDMoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDMoreTableViewController.swift; sourceTree = "<group>"; };
-		4A9BED021B6E2DD5007325B6 /* SDNotificationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDNotificationsTableViewController.swift; sourceTree = "<group>"; };
-		4A9BED041B6E9308007325B6 /* SDListingStatusTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDListingStatusTableViewController.swift; sourceTree = "<group>"; };
-		4A9BED071B6EA16C007325B6 /* SDProductsBaseCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDProductsBaseCollectionViewController.swift; sourceTree = "<group>"; };
-		4A9BED091B6EA1CA007325B6 /* SDAllProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDAllProductsViewController.swift; sourceTree = "<group>"; };
-		4A9BED0B1B6EA1DD007325B6 /* SDStockoutProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDStockoutProductsViewController.swift; sourceTree = "<group>"; };
-		4A9BED0D1B6EA1F4007325B6 /* SDFavoriteProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDFavoriteProductsViewController.swift; sourceTree = "<group>"; };
-		4A9BED0F1B6EA211007325B6 /* SDRecentlyViewedProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDRecentlyViewedProductsViewController.swift; sourceTree = "<group>"; };
-		4A9BED111B6F2F97007325B6 /* SDProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDProductsViewController.swift; sourceTree = "<group>"; };
-		4A9BED131B6F31CF007325B6 /* SDProductsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDProductsCollectionViewCell.swift; sourceTree = "<group>"; };
 		4AAF9AA41B6A956B0045472F /* SDRegisterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDRegisterTableViewController.swift; sourceTree = "<group>"; };
-		4AAF9AA91B6AAD010045472F /* PostLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PostLogin.storyboard; sourceTree = "<group>"; };
+		4AC50BB51B9321CE0086059B /* PostLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PostLogin.storyboard; sourceTree = "<group>"; };
+		4AC50BB71B9321CE0086059B /* SDTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDTabBarController.swift; sourceTree = "<group>"; };
+		4AC50BBC1B9322E40086059B /* SDHome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SDHome.storyboard; sourceTree = "<group>"; };
+		4AC50BC21B93233E0086059B /* SDOrders.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SDOrders.storyboard; sourceTree = "<group>"; };
+		4AC50BC41B9323440086059B /* SDCatalogs.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SDCatalogs.storyboard; sourceTree = "<group>"; };
+		4AC50BC61B9323620086059B /* SDPayments.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SDPayments.storyboard; sourceTree = "<group>"; };
+		4AC50BC81B93236B0086059B /* SDReturns.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SDReturns.storyboard; sourceTree = "<group>"; };
+		4AC50BCA1B9325EB0086059B /* SDHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDHomeViewController.swift; sourceTree = "<group>"; };
+		4AC50BCC1B932CED0086059B /* StoryboardSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardSelector.swift; sourceTree = "<group>"; };
+		4AC50BCE1B933E7C0086059B /* SDOrdersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDOrdersViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,19 +230,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4A0F695D1B6BE9EE008D350E /* Dashboard */ = {
-			isa = PBXGroup;
-			children = (
-				4A0F695E1B6BEA0A008D350E /* SDWidgetsViewController.swift */,
-				4A9BECF51B6D44EB007325B6 /* SDStickyHeaderLayout.swift */,
-				4A9BECF71B6D4527007325B6 /* SDSectionHeader.swift */,
-				4A9BECF91B6D6C83007325B6 /* WdigetHeaderReuseableView.swift */,
-				4A9BECFB1B6DF7BD007325B6 /* SDScrollDecorationView.swift */,
-				4A9BECFD1B6DF81F007325B6 /* SDSellProductsViewController.swift */,
-			);
-			path = Dashboard;
-			sourceTree = "<group>";
-		};
 		4A503B421B6A70C00072454E /* SDNetworkManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,6 +309,7 @@
 				4A3551CE1B752D7500F1B0DE /* SDKeyboardAccessoryView.swift */,
 				4A6BD5A31B7B0D9D002D3D7A /* SDHelpTextField.swift */,
 				4A6BD5A51B7B9ACC002D3D7A /* SDDataManager.swift */,
+				4AC50BCC1B932CED0086059B /* StoryboardSelector.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -358,11 +326,13 @@
 		4A503B941B6A7EEE0072454E /* PostLogin */ = {
 			isa = PBXGroup;
 			children = (
-				4A9BED061B6E9B86007325B6 /* Products */,
-				4A9BECFF1B6E2B3C007325B6 /* More */,
-				4A0F695D1B6BE9EE008D350E /* Dashboard */,
-				4AAF9AA91B6AAD010045472F /* PostLogin.storyboard */,
-				4A0F695B1B6BE6E6008D350E /* SDTabBarController.swift */,
+				4AC50BB21B9321CE0086059B /* Home */,
+				4AC50BB31B9321CE0086059B /* Orders */,
+				4AC50BB11B9321CE0086059B /* Catalog */,
+				4AC50BB41B9321CE0086059B /* Payments */,
+				4AC50BB61B9321CE0086059B /* Returns */,
+				4AC50BB71B9321CE0086059B /* SDTabBarController.swift */,
+				4AC50BB51B9321CE0086059B /* PostLogin.storyboard */,
 			);
 			path = PostLogin;
 			sourceTree = "<group>";
@@ -521,30 +491,46 @@
 			path = Registration;
 			sourceTree = "<group>";
 		};
-		4A9BECFF1B6E2B3C007325B6 /* More */ = {
+		4AC50BB11B9321CE0086059B /* Catalog */ = {
 			isa = PBXGroup;
 			children = (
-				4A9BED001B6E2B4B007325B6 /* SDMoreTableViewController.swift */,
-				4A9BED021B6E2DD5007325B6 /* SDNotificationsTableViewController.swift */,
-				4A9BED041B6E9308007325B6 /* SDListingStatusTableViewController.swift */,
+				4AC50BC41B9323440086059B /* SDCatalogs.storyboard */,
 			);
-			path = More;
+			path = Catalog;
 			sourceTree = "<group>";
 		};
-		4A9BED061B6E9B86007325B6 /* Products */ = {
+		4AC50BB21B9321CE0086059B /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				4A9BED071B6EA16C007325B6 /* SDProductsBaseCollectionViewController.swift */,
-				4A9BED091B6EA1CA007325B6 /* SDAllProductsViewController.swift */,
-				4A9BED0B1B6EA1DD007325B6 /* SDStockoutProductsViewController.swift */,
-				4A9BED0D1B6EA1F4007325B6 /* SDFavoriteProductsViewController.swift */,
-				4A9BED0F1B6EA211007325B6 /* SDRecentlyViewedProductsViewController.swift */,
-				4A9BED111B6F2F97007325B6 /* SDProductsViewController.swift */,
-				4A9BED131B6F31CF007325B6 /* SDProductsCollectionViewCell.swift */,
-				4A86D9A91B713BC5004907CD /* SDProductDetailsTableViewController.swift */,
-				4A5FC5AE1B760381009278D5 /* SDFillProductInfoTableViewController.swift */,
+				4AC50BBC1B9322E40086059B /* SDHome.storyboard */,
+				4AC50BCA1B9325EB0086059B /* SDHomeViewController.swift */,
 			);
-			path = Products;
+			path = Home;
+			sourceTree = "<group>";
+		};
+		4AC50BB31B9321CE0086059B /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				4AC50BC21B93233E0086059B /* SDOrders.storyboard */,
+				4AC50BCE1B933E7C0086059B /* SDOrdersViewController.swift */,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
+		4AC50BB41B9321CE0086059B /* Payments */ = {
+			isa = PBXGroup;
+			children = (
+				4AC50BC61B9323620086059B /* SDPayments.storyboard */,
+			);
+			path = Payments;
+			sourceTree = "<group>";
+		};
+		4AC50BB61B9321CE0086059B /* Returns */ = {
+			isa = PBXGroup;
+			children = (
+				4AC50BC81B93236B0086059B /* SDReturns.storyboard */,
+			);
+			path = Returns;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -771,10 +757,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AC50BBD1B9322E40086059B /* SDHome.storyboard in Resources */,
+				4AC50BC91B93236B0086059B /* SDReturns.storyboard in Resources */,
 				4A54B24D1B68C630006CBA9A /* Main.storyboard in Resources */,
+				4AC50BC31B93233E0086059B /* SDOrders.storyboard in Resources */,
 				4A54B2521B68C630006CBA9A /* LaunchScreen.xib in Resources */,
-				4AAF9AAA1B6AAD010045472F /* PostLogin.storyboard in Resources */,
+				4AC50BC71B9323620086059B /* SDPayments.storyboard in Resources */,
+				4AC50BB81B9321CE0086059B /* PostLogin.storyboard in Resources */,
 				4A54B24F1B68C630006CBA9A /* Images.xcassets in Resources */,
+				4AC50BC51B9323440086059B /* SDCatalogs.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -833,39 +824,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A9BECFA1B6D6C83007325B6 /* WdigetHeaderReuseableView.swift in Sources */,
 				4A6BD5A41B7B0D9D002D3D7A /* SDHelpTextField.swift in Sources */,
-				4A9BED051B6E9308007325B6 /* SDListingStatusTableViewController.swift in Sources */,
 				4A503B921B6A7E970072454E /* SDAppearanceManager.swift in Sources */,
 				4A6BD5A61B7B9ACC002D3D7A /* SDDataManager.swift in Sources */,
-				4A9BED141B6F31CF007325B6 /* SDProductsCollectionViewCell.swift in Sources */,
-				4A9BECFC1B6DF7BD007325B6 /* SDScrollDecorationView.swift in Sources */,
 				4A6BD5A21B7A38E5002D3D7A /* SDRegisterPageViewController.swift in Sources */,
+				4AC50BCF1B933E7C0086059B /* SDOrdersViewController.swift in Sources */,
 				4A6BD5A01B7A38BC002D3D7A /* SDContractViewController.swift in Sources */,
-				4A9BED011B6E2B4B007325B6 /* SDMoreTableViewController.swift in Sources */,
-				4A9BED081B6EA16C007325B6 /* SDProductsBaseCollectionViewController.swift in Sources */,
-				4A86D9AA1B713BC5004907CD /* SDProductDetailsTableViewController.swift in Sources */,
-				4A9BECF61B6D44EB007325B6 /* SDStickyHeaderLayout.swift in Sources */,
-				4A5FC5AF1B760381009278D5 /* SDFillProductInfoTableViewController.swift in Sources */,
 				4A6BD5B61B7BA201002D3D7A /* SDLogin.swift in Sources */,
-				4A0F695F1B6BEA0A008D350E /* SDWidgetsViewController.swift in Sources */,
 				4A6BD5B11B7B9DE8002D3D7A /* SDBaseModel.swift in Sources */,
 				4AAF9AA51B6A956B0045472F /* SDRegisterTableViewController.swift in Sources */,
 				4A503B971B6A7F630072454E /* SDLoginViewController.swift in Sources */,
-				4A9BECFE1B6DF81F007325B6 /* SDSellProductsViewController.swift in Sources */,
+				4AC50BCB1B9325EB0086059B /* SDHomeViewController.swift in Sources */,
 				4A3551C91B75280600F1B0DE /* SDRegisterBaseViewController.swift in Sources */,
 				4A3551CF1B752D7500F1B0DE /* SDKeyboardAccessoryView.swift in Sources */,
-				4A9BED121B6F2F97007325B6 /* SDProductsViewController.swift in Sources */,
-				4A9BED101B6EA211007325B6 /* SDRecentlyViewedProductsViewController.swift in Sources */,
-				4A9BED031B6E2DD5007325B6 /* SDNotificationsTableViewController.swift in Sources */,
+				4AC50BCD1B932CED0086059B /* StoryboardSelector.swift in Sources */,
 				4A3551CB1B752ABD00F1B0DE /* SDSellerDetailsViewController.swift in Sources */,
-				4A9BECF81B6D4527007325B6 /* SDSectionHeader.swift in Sources */,
-				4A9BED0A1B6EA1CA007325B6 /* SDAllProductsViewController.swift in Sources */,
 				4A54B2481B68C630006CBA9A /* AppDelegate.swift in Sources */,
 				4A6BD59E1B7A384F002D3D7A /* SDBusinessDetailsTableViewController.swift in Sources */,
-				4A9BED0E1B6EA1F4007325B6 /* SDFavoriteProductsViewController.swift in Sources */,
-				4A9BED0C1B6EA1DD007325B6 /* SDStockoutProductsViewController.swift in Sources */,
-				4A0F695C1B6BE6E6008D350E /* SDTabBarController.swift in Sources */,
+				4AC50BB91B9321CE0086059B /* SDTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

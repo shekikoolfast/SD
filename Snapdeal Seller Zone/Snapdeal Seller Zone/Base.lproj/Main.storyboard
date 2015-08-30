@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!-- -->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController storyboardIdentifier="SDLoginViewController" id="vXZ-lx-hvc" customClass="SDLoginViewController" customModule="Snapdeal_Seller_Zone" customModuleProvider="target" sceneMemberID="viewController">
@@ -43,7 +43,7 @@
                                     <constraint firstAttribute="height" constant="1" id="o1P-6O-cfy"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZLE-QB-lTu">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="redraw" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZLE-QB-lTu">
                                 <rect key="frame" x="16" y="305" width="554" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
@@ -77,8 +77,8 @@
                                     <action selector="handleTapOnLogin:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cvK-aW-2Nz"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Want to sell on Snapdeal?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhO-PN-9fs">
-                                <rect key="frame" x="200" y="483" width="201" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Want to sell on Snapdeal?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhO-PN-9fs">
+                                <rect key="frame" x="202" y="483" width="197" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -130,7 +130,7 @@
                             <constraint firstItem="B5o-QS-V8I" firstAttribute="top" secondItem="ZLE-QB-lTu" secondAttribute="bottom" constant="40" id="wfq-4f-g0r"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="G76-UR-Zbi"/>
+                    <navigationItem key="navigationItem" title=" " id="G76-UR-Zbi"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="Log In"/>
                     </userDefinedRuntimeAttributes>

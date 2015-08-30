@@ -15,6 +15,16 @@ class SDTabBarController: UITabBarController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         delegate = self
+        
+        let storyHome = UIStoryboard.HomeStoryboard()
+        let storyOrders = UIStoryboard.OrdersStoryboard()
+//        let storyCatalog = UIStoryboard.CatalogsStoryboard()
+//        let storyPayments = UIStoryboard.PaymentsStoryboard()
+//        let storyReturns = UIStoryboard.ReturnsStoryboard()
+        
+        let homeVC = storyHome.instantiateInitialViewController()
+        let ordersVC = storyOrders.instantiateInitialViewController()
+        viewControllers = [homeVC!, ordersVC!]
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,15 +41,6 @@ extension SDTabBarController: UITabBarControllerDelegate
     }
     
     func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
-        let navController = viewController as! UINavigationController
-        let rootController = navController.viewControllers[0] as UIViewController
-        if rootController is SDMoreTableViewController
-        {
-            if isNotificationArrived
-            {
-                let notificationController = storyboard?.instantiateViewControllerWithIdentifier("SDNotificationsTableViewController") as! SDNotificationsTableViewController
-                navController.viewControllers = [rootController, notificationController]
-            }
-        }
+        
     }
 }

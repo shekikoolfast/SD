@@ -13,15 +13,15 @@ class SDAppearanceManager: NSObject
     class func setupAppearance()
     {
 //        UILabel.appearance().font = UIFont.systemFontOfSize(15)
-        let backButtonImage = UIImage(named: "")
-        UIBarButtonItem.appearance().setBackButtonBackgroundImage(backButtonImage, forState: .Normal, barMetrics: .Default)
+//        let backButtonImage = UIImage(named: "")
+//        UIBarButtonItem.appearance().setBackButtonBackgroundImage(backButtonImage, forState: .Normal, barMetrics: .Default)
         
         
 //        UINavigationBar.appearance().backIndicatorImage
         UICollectionView.appearance().backgroundColor = UIColor.groupTableViewBackgroundColor()
         UITableView.appearance().backgroundColor = UIColor.groupTableViewBackgroundColor()
-        UINavigationBar.appearance().tintColor = UIColor.blackColor()
-        UINavigationBar.appearance().barTintColor = UIColor.cyanColor()
+//        UINavigationBar.appearance().tintColor = UIColor.blackColor()
+//        UINavigationBar.appearance().barTintColor = UIColor.cyanColor()
         UITabBar.appearance().tintColor = UIColor.brownColor()
         UITabBar.appearance().barTintColor = UIColor.purpleColor()
         UISearchBar.appearance().barTintColor = UIColor.whiteColor()
