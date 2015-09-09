@@ -12,11 +12,13 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+   
+   //TODO: fadf
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         SDAppearanceManager.setupAppearance()
         // Override point for customization after application launch.
+      NSProcessInfo().globallyUniqueString
         return true
     }
 

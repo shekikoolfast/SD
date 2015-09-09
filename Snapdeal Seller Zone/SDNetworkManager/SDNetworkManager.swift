@@ -16,7 +16,6 @@ public class SDNetworkManager: NSObject
 {
     
     private var networkManagerQueue: NSOperationQueue? = nil
-//    var block = CompletionHandler?()
     public class var sharedInstance :SDNetworkManager
     {
         struct Singleton
